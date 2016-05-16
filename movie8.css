@@ -1,0 +1,17 @@
+
+table {
+	margin: auto;
+	border: 5px solid #000066;
+	width: 600px;
+}
+td, th { padding: 0.5em;
+             border: 1px solid 000066;
+         font-family: Arial, sans-serif;
+}
+caption { font-family: Verdana, sans-serif;
+          font-weight: bold;
+          font-size: 1.2em;
+          padding-bottom: 0.5em;
+}
+.altrow {background-color: #eaeaea; }
+footer{text-align: center;}
