@@ -20,15 +20,6 @@
 
 
 header, main, nav, footer, figure, figcaption { display: block; }
-/********************************************
-* tag:body
- has background image
-*****************************************/
-
-body { background-color: #e6e6fa;
-       color: #adff2f;
-      background-image: url(images/IMG_20160227_142724.jpg);
-    }
 
 /********************************************
 *  tag: header, h1,#wrapper
@@ -171,6 +162,11 @@ caption { font-family: Verdana, sans-serif;
           padding-bottom: 0.5em;
           color:  #0000FF;
 }
+tfoot { font-family: Verdana, sans-serif;
+          font-weight: bold;
+          font-size: 0.7em;
+          color:  #0000FF;
+}
 .altrow {background-color: #eaeaea; }
 footer{text-align: center;}
 
@@ -280,6 +276,7 @@ li{
 ****************************************/
 p { color: #191970;
   text-indent: 3em;
+  text-align: center;
   }
 /********************************************
 * tag: aside

@@ -1,85 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
 
-<!DOCTYPE html> <!-- * A Document Type Definition tag .-->
-<html lang="en"><!-- * The opening <html> tag .-->
+  Name: KT Chu
+  Current Date: 5/17/2016
+  Class/assigment:
+  CGS1821 / Excercise 3
 
-<head><!--* A <head> section including required documentation, -->
-<!--
-Name: KT Chu
-Current Date: 5/16/2016
-Class / Assignment: CGS1821
-Week 2 Exercise 3
+  File name: singer.html
+  Language: HTML5
 
-Language: HTML5
-Purpose: A webpage about my favorite singer: George Strait
-Includes: none
-*************************************************
-Include the following information about your subject:
-	* An introductory paragraph about them
-	* A list of something related to them
-	* An image related to your subject.
-	* A properly formed hyperlink to an external page related to your subject
-	(Hint: there should be text displaying not the URL)
-	Create a Table
-		1.	In a table, display the following information about your subject:
-		2.	List five works by them and display information on them in a table.
-		3.	Your table must contain the following information for each work:
-			*	Title
-			*	Date of Release / Publication
-			*	Your choice (comment, price, awards received, etc.)
+  Includes:   my_Singer.css
+              to add color and font style
+********************************
+  Purpose:
+  To add table to web site
+*******************************
+The website has:
+An introductory paragraph about George Strait
+A Table about his best Albums rankings
+List of personal favorite songs
 
-		4.	Your table must have & use the following elements correctly.
-			*	Table element
-			*	Table head
-			*	Table body
-			*	Table foot
-			*	Table header
-			*	Table row
-			*	Table data
-
-***************************************************
 -->
 
 <title>My Favorite Singer</title> <!-- * A page title -->
 <meta charset="utf-8">   <!-- * The <meta> tag -->
-<link rel="stylesheet" href="my_Singer.css" >
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="my_Singer1.css" >
+ <!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+<![endif]-->
 </head>
-<body >
+<body>
+<div id="wrapper">
 <header>
 	<h1>GEORGE STRAIT</h1>
-	<h3>King George .... King of Country .... Strait Country .... </h3>
-
+	<h2>King George .... King of Country .... Strait Country .... </h2>
 </header>
-<main>
-	<div>
-		<!--* Multiple Heading Elements-->
+
+<div>
+<!--An introductory paragraph about George Strait-->
+<ul>
+<li>
 		<h2>A Simple Great Country Singer</h2>
 		<p>
-			George Strait is a great country singer.  His simplicity in style enhances his great voice.<br>  His songs are simple and full of meaning.  He sings simple country songs.  He does not mix country music with any other genre.<br>  Some country artists have criticized the simplicity of his concerts and stage show, but they have not convinced him to change.<br> His fans do not see a need for him to change perfection.  They love Strait just the way he is.<br>
+
+			George Strait is a great country singer.  His simplicity in style enhances his great voice.<br>
+			His songs are simple and full of meaning.  He sings simple country songs.  He does not mix country music with any other genre.<br>
+			Some artists have criticized the simplicity of his music, song, concert and stage show, but they did not convinced him to change.<br>
+			His fans never needed to change PERFECTION AND PURE GOLD.<br>
 		</p>
-		</div>
-<div>
+		</li>
+<li>
+		<h3>Strait's last tour was 2014......<br>
+		The Cowboy Rides Away.......................</h3>
+		<p>
+
+
+		George Strait announced his last concert tour.<br>
+		 "It's been a hard decision for me to make, but as far as touring goes,<br>
+		 I've decided I'm not going to tour anymore after the next two years," <br>
+		 the country singer said at a press conference at the Country Music Hall of Fame.<br>
+		 </p>
+</li>
+<li>
+
+		<h3>	Links to George Strait<br></h3>
+  		<p>	<a href = "http://www.georgestrait.com/Index.asp">georgestrait.com</a> <!--*One hyperlink-->
+  	     	--- Strait's Official Website<br>
+
+  	 		<a href = "http://www.georgestrait.com/Assets/strait_talk/pdf/members/st_maraprmay14.pdf">
+  	    	Strait Talk</a>--- A magazine about Strait<br>
+  	    </p>
+
+</li>
+</ul>
+</div>
+<div id="flexbox_use">
+<main>
 <table>
 <!--********************************************************************
-a Table
-		1.	In a table, display the following information about your subject:
-		2.	List five works by them and display information on them in a table.
-		3.	Your table must contain the following information for each work:
-			*	Title
-			*	Date of Release / Publication
-			*	Your choice (comment, price, awards received, etc.)
+Table
+    1.  List five works by them
+    2.  Three Columns
+      * Title
+      * Date of Release
+      * Chart Entries
 
-		******************************
- table have & use the following elements .
-			*	Table element
-			*	Table head
-			*	Table body
-			*	Table foot
-			*	Table header
-			*	Table row
-			*	Table data
+    4.  Use the following elements correctly.
+      * Table element
+      * Table head
+      * Table body
+      * Table foot
+      * Table header
+      * Table row
+      * Table data
+
 **************************************************************-->
- <caption>TOP STRAIT ALBUMS</caption>
+ <caption><h2>TOP STRAIT ALBUMS</h2></caption>
 <thead>
 <tr>
 
@@ -120,79 +140,63 @@ a Table
     	<td>Platinum</td>
     </tr>
 
-    </tbody>
-</table>
-</div>
-	<table>
- <caption>BEST STRAIT SONGS<br>
- STRAIT COUNTRY HAD MORE THAN 60 NUMBER 1S SONGS</caption>
-<thead>
-<tr>
-
-    <th>Title</th>
-    <th>Date of Release</th>
-    <th>Lyrics Sample</th>
-    </tr>
-</thead>
-<tbody>
-    <tr class="altrow">
-    <td> Fool Hearted Memory</td>
-    <td>1982</td>
-    <td> ..."He's got a fool hearted memory<br>
-					      He sits patiently<br>
-					      Here every night so it can fool him more"...<br></td>
-    </tr>
-    <tr>
-<td> A Fire I Can't Put Out</td>
-<td>1983</td>
-
-      <td>... "At least I'm happy knowing what love is all about.<br>
-							You'll always be a fire I can't put out." ...<br>
+</tbody>
+<tfoot><tr>
+<td>Copyright &copy; 2007-16, Steve Hawtin et
+al.  Generated 24 Apr 2016 08:49 GMT.
 </td>
-</tr>
-<tr class="altrow">
-<td> Ace in the Hole</td>
-<td>1989</td>
-				<td>   ... "You've got to learn to play your cards right if you expect to win in life.<br>
+<td>from website:<br>  <a href="http://tsort.info/">tsort.info</a>
+</td>
+<td><a href="http://tsort.info/music/1g0936.htm">version number</a>this data is
+version 2.5.0026.
+
+</td>
+</tr></tfoot>
+
+</table>
+</main>
+<aside>
+<img  id="floatImg" src="GS_ItJustComesNatural.jpg" alt="GeorgeStrait">
+</aside>
+</div>
+	<div>
+
+		<h2>Favorite Songs</h2>
+			<ul class = "favorites"><!--*  Unordered list -->
+
+			<li>
+			<h3> Fool Hearted Memory  (1982)</h3>
+			<img  id="floatright" src="GS_Troubadour.jpg" alt="GeorgeStrait">
+				<p>	..."He's got a fool hearted memory.<br>
+				          That won't let him see <br>
+				          That she walked out the door<br>
+					      He's got a fool hearted memory<br>
+					      He sits patiently<br>
+					      Here every night so it can fool him more"...<br>
+					      </p>
+</li>
+			<li>
+			<h3> A Fire I Can't Put Out  (1983)</h3>
+		<p>		   ... "I don't know how to handle the dream you left behind.<br>
+							It's like a lighted candle burning up my mind.<br>
+							At least I'm happy knowing what love is all about.<br>
+							You'll always be a fire I can't put out." ...<br>
+							</p>
+</li>
+			<li> <h3>Ace in the Hole  (1989)</h3>
+				 <p>  ... "Life is a gamble, a game we all play,<br>
+							But you need to save something for a rainy day.<br>
+							You've got to learn to play your cards right if you expect to win in life.<br>
 							Don't put it all on the line for just one roll.<br>
 							You've got to have an ace in the hole."...<br>
-				</td>
-</tr>
- <tr >
-    <td>If I Know Me</td>
-    <td>1991</td>
- </tr>
- <tr class="altrow">
-    <td> Easy Come, Easy Go</td>
-    <td>1993</td>
- </tr>
- <tr>
-    <td> Run</td>
-    <td>2001</td>
- </tr>
- <tr class="altrow">
-    <td>Give It Away</td>
-    <td>2006</td>
- </tr>
-</tbody>
-</table>
+							</p>
+</li>
+				</ul>
+</div>
 
-	<div>
-		<h3>Strait's last tour was 2014...The Cowboy Ride Away.......................</h3>
-		<p>George Strait announced his last concert tour. "It's been a hard decision for me to make, but as far as touring goes, I've decided I'm not going to tour anymore after the next two years," the country singer said at a press conference at the Country Music Hall of Fame.</p>
-
-	</div>
-	<div>
-			<h3>Links to George Strait</h3>
-  			<h4><a href = "http://www.georgestrait.com/Index.asp">georgestrait.com</a> <!--*One hyperlink-->
-  	     	--- Strait's Official Website</h4>
-
-  	 		<h4><a href = "http://www.georgestrait.com/Assets/strait_talk/pdf/members/st_maraprmay14.pdf">
-  	    	Strait Talk</a>--- A magazine about Strait</h4>
-	</div>
-</main>
-<footer>
-	<h4>Copyright &copy; 2016, by KT Chu</h4>
+<footer >
+			Copyright &copy; 2016 Kim Chu <br><a href="mailto:kim@chucrew.net">kim@chucrew.net</a>
 </footer>
+</div>
 </body>
 </html>
