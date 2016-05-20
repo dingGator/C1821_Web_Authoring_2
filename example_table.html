@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--
+MJ Kaufmann (MAJK)
+9/2/2015
+CGS1821 Module 2 Homework
+HTML5
+A webpage that demostrate tables
+example_table.css
+**********************************
+Easy participation points:
+Download the files in the example_table.zip file below this lecture.
+Edit the html to use colspan and rowspan properly
+but modify it so the final result displays differently than any of the above images.
+(The CSS that creates the borders is included
+but you don't have to modify it unless you are feeling adventurous.
+We will work with borders next week.)
+Feel free to add or remove data as you feel is necessary.
+Zip up your modified files and upload the.zip file
+to the Combining Multiple Cells Dropbox.
+
+-->
+
+  <title>Table Styling Demo</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="example_table.css">
+</head>
+<body>
+<table>
+  <caption><h1>Christmas Gift List: Books</h1></caption>
+  <thead>
+    <tr>
+      <th>Genre</th>
+	  <th>Item</th>
+      <th>Author</th>
+	  <th>Type</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan = "2">Fantasy</td>
+	  <td>In the Company of the Dead</td>
+      <td>Ciara Ballintyne</td>
+	  <td>Kindle</td>
+      <td>1</td>
+      <td>$4.99</td>
+    </tr>
+    <tr>
+
+	  <td>Shadows of the Realm</td>
+      <td>Dionne Lister</td>
+      <td>Paperback</td>
+	  <td>1</td>
+      <td>$14.99</td>
+    </tr>
+	<tr>
+      <td>Management</td>
+	  <td> Make It So: Leadership Lessons from Star Trek TNG</td>
+      <td>Wess Roberts</td>
+      <td>Kindle</td>
+	  <td>2</td>
+      <td>$13.99</td>
+    </tr>
+	<tr>
+      <td rowspan = "2">Science Fiction</td>
+	  <td>Singularity Sky</td>
+      <td rowspan = "2">Charles Stross</td>
+      <td>Paperback</td>
+	  <td>1</td>
+      <td>$7.87</td>
+    </tr>
+	<tr>
+
+	  <td>Accelerando</td>
+      <td>Kindle</td>
+	  <td>3</td>
+      <td>$7.99</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5">Subtotal</td>
+
+
+      <td>$79.80</td>
+    </tr>
+    <tr>
+      <td colspan="5">Tax</td>
+
+
+      <td>$5.19</td>
+    </tr>
+    <tr>
+      <td colspan="4">Total</td>
+
+      <td>8</td>
+      <td>$84.99</td>
+    </tr>
+  </tfoot>
+</table>
