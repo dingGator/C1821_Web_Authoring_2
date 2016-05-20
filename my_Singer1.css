@@ -182,6 +182,10 @@ p {color: #333333;
   text-indent: 3em;
   }
 
+.goldWord {text-shadow: 3px 3px 5px#ffd700;
+  color:#333333;
+}
+
 ul {list-style-type: none;
 }
 
