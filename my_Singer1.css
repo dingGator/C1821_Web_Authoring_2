@@ -71,7 +71,10 @@ it floats right
 }
 /********************************************
 * tag: h1
-top header: title page;
+  background-color: very dark blue
+    word color:  light grayish blue
+    text-shadow: light gray
+
 *****************************************/
 
 
@@ -86,6 +89,7 @@ h1 {  background-color: #191970;
 
 /*************************************
 *h2 second line
+word color: very dark blue;
 *************************************/
 
 h2 {
@@ -115,6 +119,7 @@ Table
 
     4.  Use the following elements correctly.
       * Table element
+              border: 5px solid vry dark blue
       * Table head
       * Table body
       * Table foot
@@ -122,7 +127,15 @@ Table
       * Table row
       * Table data
 
-
+tag: table, td, th
+  border: very dark blue
+  word color: very dark gray
+tag: caption
+  word color: very dark gray
+tag: tfoot
+  word color: very dark gray;
+tag: altrow
+  background-color: very light gray;
 ****************************************/
 table { margin: auto;
     border: 5px solid #000066;
@@ -175,14 +188,18 @@ main { padding:0 0; }
 
 /********************************************
 * tag: p
-* the description paragraphs
+*   the description paragraphs
+    word color: very dark gray
+  tag: goldword
+    text shadow: pure yellow
+    word color: very dark gray
 ****************************************/
 p {color: #333333;
   text-align: center;
   text-indent: 3em;
   }
 
-.goldWord {text-shadow: 3px 3px 5px#ffd700;
+.goldWord {text-shadow: 3px 3px 5px #ffd700;
   color:#333333;
 }
 
@@ -228,7 +245,7 @@ flex:3;
 .favorites img {width: 30%;}
 /********************************************
 * tag: main a
-*color is dark lime green for a tag in main
+*color is dark lime green for <a> tag in main
 ****************************************/
 main a{color:#006600;
   text-decoration: none;}
@@ -237,6 +254,7 @@ main a{color:#006600;
 /********************************************
 * tag: img
 *  The images of the page
+  box-shadow: pure yellow ;
 ****************************************/
 
 img { width: 80%;
