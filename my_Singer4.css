@@ -7,8 +7,8 @@
    Author: KT Chu
    Date: 5/17/2016
 
-   File name: my_Singer2.css
-   Supporting files:	singer2.html
+   File name: my_Singer4.css
+   Supporting files:	singer4.html
    Purpose:
    To use CSS style sheet to add
    colors and styles to HTML
@@ -136,12 +136,12 @@ tag: caption
   word color: very dark gray
 tag: tfoot
   word color: very dark gray;
-tag: tr:nth-of-type(odd)
+tag: tr:nth-child(odd)
   odd row background-color: light grayish yellow;
-tag: tr:nth-of-type(even)
+tag: tr:nth-child(even)
   odd row background-color: very pale blue;
 tag: solid_gold
-  color of third column border: pure goldish;
+  color of third column border: pure gold;
 
 ****************************************/
 table { margin: auto;
@@ -150,15 +150,18 @@ table { margin: auto;
 
 }
 td, th { padding: 0.5em;
+
          border: 1px solid #e6e600;
+
          font-family: Arial, sans-serif;
-         font-weight: bold;
-         color: #333333;
+        /* font-weight: bold;
+        */
          border-collapse: separate;
     border-spacing: 4px 8px;
 }
 caption { font-family: Verdana, sans-serif;
-          font-weight: bold;
+        /*  font-weight: bold;
+        */
           font-size: 1.2em;
           padding-bottom: 0.5em;
           color: #333333;
@@ -173,17 +176,10 @@ tfoot { font-family: Verdana, sans-serif;
 th { background-color: #f2e6ff;
 }
 
-tbody tr:nth-child(odd){
-  background-color: #fafae6;
+tbody td:nth-child(odd){
+  color:#a3a300;
 }
-tbody tr:nth-child(even){
-  background-color: #f2e6ff;
-}
-
-.solid_gold { border: 3px solid #ffd700; }
-/*
-.altrow {background-color: #eaeaea; }
-*/
+.date_release { background-color: #dcdcff; }
 /********************************************
 * tag: flexbox_use
 * the webpages is configured for size greater ****
@@ -223,7 +219,6 @@ p {color: #333333;
   text-align: center;
   text-indent: 3em;
   }
-
 .goldWord {text-shadow: 3px 3px 5px #ffd700;
   color:#333333;
 }
