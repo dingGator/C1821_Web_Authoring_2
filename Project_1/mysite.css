@@ -1,0 +1,414 @@
+/*******************************
+
+   CGS1820
+   Class Project #4 Excercise 6
+   Chapter 3 Hands-On Practices
+
+   Author: KT Chu
+   Date: 4/21/2016
+
+   File name: mysite.css
+   Supporting files:	index.html
+   						history.html
+   						exoIt.html
+   						favorites.html
+   Purpose:
+   To use CSS style sheet to add
+   colors and styles to HTML
+**************************************
+*/
+
+/********************************************
+*tag:header, main, nav, footer, figure, figcaption:
+* use display: block for all elements
+*****************************************/
+
+
+header, main, nav, footer, figure, figcaption { display: block; }
+/********************************************
+* tag:body
+ has background image
+*****************************************/
+
+body { background-image: url(images/IMG_20160227_142724.jpg);
+    }
+
+/********************************************
+*  tag: header, h1,#wrapper
+*   use googlefonts in header h1 and wrapper
+*****************************************/
+header, h1,#wrapper { margin-top: 0;
+  font-family: 'Libre Baskerville';
+}
+
+/********************************************
+* tag: wrapper
+* have background color of light grayish blue
+
+*****************************************/
+#wrapper {  background-color: #E6E6FA;
+  width:90%;
+  margin:auto;
+border-radius: 2%;
+}
+/********************************************
+* tag:location
+in the all pages as header
+* use google font
+*****************************************/
+
+
+#location{  font-family: 'Libre Baskerville';
+      text-align: center;
+}
+/********************************************
+* tag: loatright
+for the image in the main of the content pages
+it float right
+*****************************************/
+
+#floatright {
+  margin: 10%;
+  float: right;
+}
+/********************************************
+* tag: nav ul
+navigation bar
+*****************************************/
+nav ul{list-style-type: none;
+font-size: 1.25em;
+text-align: left;}
+/********************************************
+* tag: nav a
+navigation color changes as user use the navigation bar
+
+nav a:link {color:#006600;} is very dark lime green.
+
+nav a:visited {color:#AA33AA;} is dark magenta
+
+nav a:focus{ color:#CC66CC; } is moderate magenta
+
+nav a:hover{ color:#CC66CC; } is moderate magenta
+
+nav a:active {color:#000000;} is black
+
+*****************************************/
+
+nav a:link {color:#006600;}
+nav a:visited {color:#AA33AA;}
+nav a:focus{ color:#CC66CC; }
+nav a:hover{ color:#CC66CC; }
+nav a:active {color:#000000;}
+
+/********************************************
+* tag: nav a
+font bold
+text align to left
+mp underline
+*****************************************/
+
+nav a {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    text-decoration: none;
+}
+
+/********************************************
+* tag: header a  it is the   skip to content   link
+color changes as user use the bar
+
+header a:link {color:#006600;} is very dark lime green.
+
+header a:visited {color:#AA33AA;} is dark magenta
+
+header a:focus{ color:#CC66CC; } is moderate magenta
+
+header a:hover{ color:#CC66CC; } is moderate magenta
+
+*****************************************/
+
+
+header a{font-size:1.0em;}
+header a:link {color: #006600;}
+header a:visited {color: #AA33AA;}
+header a:focus {color: #CC66CC;}
+header a:hover{color:#CC66CC;}
+
+/********************************************
+* tag: h1
+top header: title page;
+*****************************************/
+
+
+h1 {  background-color: #191970;
+    color:  #E6E6FA;
+    padding: 1% 0;
+    font-size: 200%;
+    text-shadow: 3px 3px 5px #CCCCCC;
+    text-align: center;
+    border-radius: 25%;
+}
+
+/*************************************
+*h2 second line of header
+*page name: home, history, experience it, favorites;
+* and the address line
+ ************************************/
+
+h2 {
+    color:  #191970;
+    font-family:  Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 1.25em;
+    margin: 0 0 0 0;
+}
+/********************************************
+* tag:h3
+* the title of the paragraphs on each page
+*****************************************/
+
+h3{ text-align: center;
+  font-size: 1.15em;
+ }
+/********************************************
+* tag: flexbox_use
+* the webpages is configured for size greater ****
+*  this is to use the webkit &flexbox to configure website
+*  into two or three columns websites
+*  and to use with @media & flexbox to configure
+*  webpage for tablet (1024)and mobile(768)
+*****************************************/
+
+#flexbox_use {
+        width: 100%;
+        display: -webkit-flex;
+        display: flex;
+       -webkit-flex-direction:row;
+        flex-direction: row;
+     }
+
+main,aside{ padding:0 0; }
+/********************************************
+* use the webkit & flexbox to configure website
+*to format webpage to two columns or three columns
+*  and to use with @media to configure for
+*  this is to use the flexbox to configure
+*  website for tablet (1024)and mobile(768)
+*
+
+note:  flex and webkit-flex: should add up to 10;
+****************************************/
+nav {  -webkit-flex:2;
+      flex:2;
+}
+
+main {
+  -webkit-flex:5;
+flex:5;
+}
+
+aside {
+  -webkit-flex:3;
+flex:3;
+}
+
+.content_His_Exp_Fav{
+  -webkit-flex:8;
+  flex:8;
+}
+
+dl{ margin: 0 10% 1% 5%;
+}
+/*************************************
+* ul and li are the navigation bar
+************************************/
+ul{
+  list-style-type: none;
+  font-weight: bold;
+}
+
+nav{display:block;
+margin: auto;}
+li{
+
+  font-weight: bold;
+}
+
+/********************************************
+* tag: p
+* the description paragraphs of webpages
+****************************************/
+p {
+  text-indent: 3em;
+  }
+/********************************************
+* tag: place
+*  the address line on the header
+****************************************/
+
+
+.place {
+
+    text-align: center;
+}
+
+/********************************************
+* tag: parkinfo
+*  the  hours and fees header line of the webpages
+****************************************/
+.parkInfo{
+    width:80%;
+    color: #00003F;
+    font-size: 1em;
+
+}
+
+/********************************************
+* tag: parkhours
+*   the park hours header line
+*
+****************************************/
+.parkhours{
+    float: left;
+ border-width: 1px;
+    border-bottom-style: dashed;
+}
+/********************************************
+* tag: parkfees
+*   the park fees header line
+*
+****************************************/
+
+.parkfees{
+     float:right;
+     border-width: 1px;
+    border-bottom-style: dashed;
+}
+
+/********************************************
+* tag: park_intro and site_intro
+*  the paragraphs of the home page
+*
+****************************************/
+
+.park_intro, .site_intro {
+    font-size: 1em;
+        color: #3232d6;
+        padding: 0 0 0 0;
+
+}
+/********************************************
+* tag: .legends, .favoritePoints, .tourSummary
+*  the paragraphs of the history, favorites, experience it page
+*
+****************************************/
+
+.legends, .favoritePoints, .tourSummary {
+      width: 70%;
+      font-size: 1em;
+      color: #00008B;
+
+}
+/********************************************
+* tag: .legends img, .favoritePoints img, .tourSummary img
+*  the images of the history, favorites, experience
+*
+****************************************/
+
+.legends img, .favoritePoints img, .tourSummary img {width: 30%;}
+.challenge{
+  float:right;
+}
+
+.image_challenge {clear:right;
+                  display: block;
+                  margin: auto;
+                  }
+/********************************************
+* tag: aside
+*  The challenge ( third column )in the home page
+*
+****************************************/
+main a{color:#006600;
+  text-decoration: none;}
+
+aside{
+  float: right;}
+
+
+/********************************************
+* tag: aside h2
+*  The header of challenge ( third column )in the home page
+*
+****************************************/
+
+aside h2{
+  text-align: center;
+  font-size:0.90em;
+  color:#cc66cc;
+}
+
+
+/********************************************
+* tag: img
+*  The images of the pages
+****************************************/
+
+img { width: 80%;
+ box-shadow: 2px 1px 7px 5px #191970;
+ border-radius: 20%;
+
+}
+
+
+/********************************************
+* tag: footer
+*  The footer color is very dark gray
+****************************************/
+
+footer {
+      color: #333333;
+      font-size: 100%;
+      font-style: italic;
+    text-align: center;
+    padding: 2.5%;
+}
+/****************************
+*  this is to use the @media to configure
+*  webpages for tablet (1024)and mobile(768)
+****************************************/
+
+@media only screen and (max-width: 1024px) {
+      #flexbox_use { -webkit-flex-direction: column;
+        flex-direction: column;}
+            body { margin: 0; padding: 1em; }
+            #wrapper { width: auto;
+              margin:0;}
+        h1 { font-size: 200%; }
+      nav li { padding: 0.5em ;
+             font-size: 1em;  }
+      nav ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+      main {padding:1em;}
+      img {width: 70%;}
+
+
+     }
+
+@media only screen and (max-width: 768px) {
+       nav {-webkit-order:1;
+          order:1;}
+       nav ul { -webkit-flex-wrap: wrap;
+            flex-wrap: wrap; }
+
+}
+
+
+
