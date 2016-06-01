@@ -32,7 +32,7 @@ The website has:
 <body>
 <form method= "post" action ="sub_form.php">
 <fieldset>
-<h1><legend>Customer Information</legend></h1>
+<legend>Customer Information</legend>
 
 
 <label for ="Fname">First Name: </label>
@@ -58,15 +58,15 @@ The website has:
 </fieldset>
 
 <fieldset>
-<h1><legend>Order of Samoflanges</legend></h1>
-<label for ="numSamoflanges">Number of Samoflanges between 1 and 100:</label>  <input type="text" name="numSamoflanges" id="numSamoflanges" min ="1" nax="100"><br><br>
-<label>Can Be Contacted: </label>
-<input type="text" name="contactMe" id="contactMe" list ="contactMe">
+<legend>Order of Samoflanges</legend>
+<label for ="numSamoflanges">Number of Samoflanges between 1 and 100:</label>
+<input type="number" name="numSamoflanges" id="numSamoflanges" min ="1" max="100"><br><br>
+<label for ="contactMe">Can Be Contacted: </label>
 <select size ="4" name ="contactMe" id ="contactMe">
-<option value="by Email">
-<option value="by Phone">
-<option value="by Email or Phone">
-<option value="no">
+<option value="by Email">by Email</option>
+<option value="by Phone">by Phone</option>
+<option value="by Email or Phone">by Email or Phone</option>
+<option value="no">no</option>
 </select>
 <br><br>
 
