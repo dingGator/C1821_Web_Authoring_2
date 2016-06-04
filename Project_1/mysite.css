@@ -1,16 +1,17 @@
 /*******************************
 
-   CGS1820
-   Class Project #4 Excercise 6
-   Chapter 3 Hands-On Practices
+   CGS1821
+   Class Project 1
+
 
    Author: KT Chu
-   Date: 4/21/2016
+   Date: 6/3/2016
 
    File name: mysite.css
-   Supporting files:	index.html
+   Supporting files:
+              index.html
    						history.html
-   						exoIt.html
+   						expIt.html
    						favorites.html
    Purpose:
    To use CSS style sheet to add
@@ -62,7 +63,7 @@ in the all pages as header
       text-align: center;
 }
 /********************************************
-* tag: loatright
+* tag: floatright
 for the image in the main of the content pages
 it float right
 *****************************************/
@@ -373,38 +374,23 @@ img { width: 80%;
 }
  /******************************************
 Table
-    1.  List five works by them
-    2.  Three Columns
-      * Title
-      * Date of Release
-      * Chart Entries
-
-    4.  Use the following elements correctly.
-      * Table element
-              border: 5px solid vry dark blue
-      * Table head
-      * Table body
-      * Table foot
-      * Table header
-      * Table row
-      * Table data
-********************************
 tag: table
- border: very dark blue
+   border:  #00008b  very dark blue
 tag: td, th
-  border: pure yellow
-  word color: very dark gray
+border:  #e6e600   pure yellow
+  word color:  #00008B very dark blue
 tag: caption
-  word color: very dark gray
+  word color:  #333333  very dark gray
 tag: tfoot
-  word color: very dark gray;
-tag: tr:nth-child(odd)
-  odd row background-color: light grayish yellow;
-tag: tr:nth-child(even)
-  odd row background-color: very pale blue;
-tag: solid_gold
-  color of third column border: pure gold;
+  word color: #333333  very dark gray;
+tag: th
+  background-color:  #f2e6ff  very pale voilet
 
+tag: tbody tr:nth-child(even)
+  even row background-color: #d8ded8   light grayish lime green
+
+tag:  tbody td:nth-child(odd)
+  odd column word color:#8b8b00   dark yellow olive tone
 ****************************************/
 table { margin: auto;
     border: 5px solid #00008b;
