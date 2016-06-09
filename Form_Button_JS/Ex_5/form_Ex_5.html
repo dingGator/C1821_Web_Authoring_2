@@ -4,11 +4,11 @@
 <!--      Required documentation
 
   Name: KT Chu
-  Current Date: 5/31/2016
+  Current Date: 6/8/2016
   Class/assigment:
-  CGS1821 / Excercise 4_4
+  CGS1821 / Excercise 5
 
-  File name: form_Ex_4.html
+  File name: form_Ex_5.html
   Language: HTML5
 
   Includes:   formValid.css
@@ -22,7 +22,7 @@ The website has:
 
 -->
 
-<title>Form_Ex_4</title> <!-- * A page title -->
+<title>Form_Ex_5</title> <!-- * A page title -->
 <meta charset="utf-8">   <!-- * The <meta> tag -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
@@ -30,50 +30,52 @@ The website has:
 
 </head>
 <body>
+<div class="wrapper">
 <form method= "post" action ="sub_form.php">
-<fieldset>
+<fieldset id = "customer_Information">
 <legend>Customer Information</legend>
 
 
 <label for ="Fname">First Name: </label>
-<input type="text" name="Fname" id="Fname"><br><br>
+<br><input type="text" name="Fname" id="Fname"><br><br>
 
 <label for ="Lname">Last Name: </label>
-<input type="text" name="Lname" id="Lname"><br><br>
+<br><input type="text" name="Lname" id="Lname"><br><br>
 
 <label for ="emailAddie">Email: </label>
-<input type="email" name="emailAddie" id="emailAddie"><br><br>
+<br><input type="email" name="emailAddie" id="emailAddie"><br><br>
 <label for ="mailAddie">Address:  </label>
-<input type="text" name="mailAddie" id="mailAddie"><br><br>
+<br><input type="text" name="mailAddie" id="mailAddie"><br><br>
 <label for ="City">City:  </label>
-<input type="text" name="City" id="City"><br><br>
+<br><input type="text" name="City" id="City"><br><br>
 
 <label for ="State">State:  </label>
-<input type="text" name="State" id="State"><br><br>
+<br><input type="text" name="State" id="State"><br><br>
 <label for ="Zip">Zip:  </label>
-<input type="text" name="Zip" id="Zip"><br><br>
+<br><input type="number" name="Zip" id="Zip"><br><br>
 <label for ="phoneNum">Telephone Number: </label><br>
-<input type="tel" name="phoneNum" id="phoneNum"><br><br>
+<br><input type="tel" name="phoneNum" id="phoneNum"><br><br>
 
 </fieldset>
 
-<fieldset>
+<fieldset id= "order_Samoflanges">
 <legend>Order of Samoflanges</legend>
 <label for ="numSamoflanges">Number of Samoflanges between 1 and 100:</label><br><br><br>
-<input type="number" name="numSamoflanges" id="numSamoflanges" min ="1" max="100"><br>
-<label for ="contactMe">Can Be Contacted: </label><br>
-<select name ="contactMe" id ="contactMe">
-<option value="by Email">by Email</option>
-<option value="by Phone">by Phone</option>
-<option value="by Email or Phone">by Email or Phone</option>
-<option value="no">no</option>
-</select>
-<br><br>
+<br><input type="number" name="numSamoflanges" id="numSamoflanges" min ="1" max="100"><br><br>
+<label>Contact Me: </label><br><br><br>
+<input type="radio" name="contactMe"  value="by Email">Yes by Email<br>
+
+<input type="radio" name="contactMe"  value="by Phone">Yes by Phone<br>
+
+<input type="radio" name="contactMe"  value="by Email or Phone">Yes by Email or Phone<br>
+
+<input type="radio" name="contactMe"  value="no">No, Do Not Contact Me<br>
 
 </fieldset>
 
 <button type= "submit">Send</button>
 <button type= "reset">Reset</button>
 </form>
+</div>
 </body>
 </html>
