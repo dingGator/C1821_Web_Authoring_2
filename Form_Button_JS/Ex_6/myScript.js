@@ -47,9 +47,10 @@ function validateURL()
 	alert(" URL entered is not valid");}
 }
 
-function validateState() {
-
-	e = "wa|or|ca|ak|nv|id|ut|az|hi|mt|wy" +
+function validateState()
+{
+	var e=document.orderForm.State.value;
+	stateMatch = "wa|or|ca|ak|nv|id|ut|az|hi|mt|wy" +
 
 				"co|nm|nd|sd|ne|ks|ok|tx|mn|ia|mo" +
 
@@ -61,7 +62,7 @@ function validateState() {
 
 
 
-	if (e.indexOf(e.toLowerCase() + "|") > -1) {
+	if (stateMatch.indexOf(statMatch.toLowerCase(e) + "|") > -1) {
 
 		alert ( " Valid State Abbreviations");
 
