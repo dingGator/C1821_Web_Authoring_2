@@ -27,6 +27,7 @@ The website has:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="formValid_1.css" >
+<script src="myScript_Demo_1.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -53,6 +54,8 @@ The website has:
 <label for ="State">State:  </label>
 <br><input type="text" name="State" id="State" onchange = "validateState()" required><br><br>
 
+<button type="button" onclick ="state_Abbreviations()">Click to see list of State Abbreviation</button><br><br>
+
 <label for ="Zip">Zip:  </label>
 <br><input type="number" name="Zip" id="Zip" onchange = "validateZip()" required><br><br>
 <label for ="phoneNum">Telephone Number: </label><br>
@@ -60,12 +63,7 @@ The website has:
 
 <label for ="urlAddie">URL: </label>
 <br><input type="url" name="urlAddie" id="urlAddie" onchange="validateURL()" required>
-<script>
-function checkBlank_Fields()
-{
 
-}
-</script>
 
 
 </fieldset>

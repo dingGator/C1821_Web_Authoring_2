@@ -126,7 +126,7 @@ function validateState()
 
 
 
-	if (stateMatch.indexOf(statMatch.toLowerCase(e) + "|") > -1) {
+	if (stateMatch.indexOf(e.toLowerCase(e) + "|") > -1) {
 
 		alert ( " Valid State Abbreviations");
 
