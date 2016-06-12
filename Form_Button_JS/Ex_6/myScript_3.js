@@ -1,140 +1,138 @@
-// There are many ways to pick a DOM node; here we get the form itself and the email
-// input box, as well as the span element into which we will place the error message.
-/*
+var errorFoundURL = false;
+var errorFoundState = false;
+var errorFoundZip = false;
+var errorFoundFname = false;
+var errorFoundLname = false;
+var errorFoundSamoCnt = false;
+var errorFoundEmail = false;
+var errorFoundAddress = false;
+var errorFoundCity = false;
 
-var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('emailAddie');
-var error = document.querySelector('.error');
-var State = document.getElementById('State');
-var Zip = document.getElementById('Zip');
-var uRL = document.getElementById('urlAddie');
+function check_validations() {
 
-
-State.addEventListener("keyup", function(event))
- {
-  // Each time the user types something, we check if the
-  // email field is valid.
-  if (State.validity.valid) {
-    // In case there is an error message visible, if the field
-    // is valid, we remove the error message.
-    error.innerHTML = ""; // Reset the content of the message
-    error.className = "error"; // Reset the visual state of the message
-  }
-}, false);
-
-Zip.addEventListener("keyup",function(event))
-{
-  // Each time the user types something, we check if the
-  // email field is valid.
-  if (Zipe.validity.valid) {
-    // In case there is an error message visible, if the field
-    // is valid, we remove the error message.
-    error.innerHTML = ""; // Reset the content of the message
-    error.className = "error"; // Reset the visual state of the message
-  }
-}, false);
-
-
-email.addEventListener("keyup", function (event) {
-  // Each time the user types something, we check if the
-  // email field is valid.
-  if (email.validity.valid) {
-    // In case there is an error message visible, if the field
-    // is valid, we remove the error message.
-    error.innerHTML = ""; // Reset the content of the message
-    error.className = "error"; // Reset the visual state of the message
-  }
-}, false);
-form.addEventListener("submit", function (event) {
-  // Each time the user tries to send the data, we check
-  // if the email field is valid.
-  if (!email.validity.valid) {
-
-    // If the field is not valid, we display a custom
-    // error message.
-    error.innerHTML = "E-mail is invalid.";
-    error.className = "error active";
-    // And we prevent the form to be sent by canceling the event
-    event.preventDefault();
-  }
-}, false);
-
-
-
-*/
-
-function validateZip()
-{
-	var a = document.orderForm.Zip.value;
-	var zipCodePattern =/^\d{5}$/;
-	if(zipCodePattern.test(a))
-	{
-		alert ("Good Zip code entered. ");
-	}else{
-	alert("The input for Zip code is bad, please enter in a 5 digit number");}
+    if (errorFoundState || errorFoundZip || errorFoundSamoCnt || errorFoundFname || errorFoundLname || errorFoundCity || errorFoundAddress) {
+        alert("Please check each field for errors.");
+        return false;
+    }
+    else {
+        return true;
+    }
 }
-function validateNumSamoflanges()
-{
-	var b = document.orderForm.numSamoflanges.value;
 
-if(isNaN(b) || (b < 0 ||b > 100))
+function validateFname() {
+    var a = document.orderForm.Fname.value.trim();
+    if (a == null || a == "") {
+        errorFoundFname = true;
+        alert("The First Name field cannot be empty.");
+    } else {
+        errorFoundFname = false;
+    }
+}
 
-{
+function validateLname() {
+    var a = document.orderForm.Lname.value.trim();
+    if (a == null || a == "") {
+        errorFoundLname = true;
+        alert("The Last Name field cannot be empty.");
+    } else {
+        errorFoundLname = false;
+    }
+}
 
-alert(" Number of Samoflanges is NOT between 0 -100 range.");
+function validateAddress() {
+    var a = document.orderForm.mailAddie.value.trim();
+    if (a == null || a == "") {
+        errorFoundAddress = true;
+        alert("The Address field cannot be empty.");
+    } else {
+        errorFoundAddress = false;
+    }
+}
 
-}else{
-	alert ("  Number of Samoflanges is between 0-100 range.  Good Number of Samoflanges")
+function validateCity() {
+    var a = document.orderForm.City.value.trim();
+    if (a == null || a == "") {
+        errorFoundCity = true;
+        alert("The City field cannot be empty.");
+    } else {
+        errorFoundCity = false;
+    }
 }
 
 
-}
-function validateEmail()
-{	var c = document.orderForm.emailAddie.value;
-	var emailAddieMatch = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
-  	if(emailAddieMatch.test(c))
-	{
-		alert ("Good Email entered ");
-	}else{
-	alert(" Email entered is not valid");}
-}
-
-function validateURL()
-{
-	var d = document.orderForm.urlAddie.value;
-	var urlAddieMatch =/^((http|https)([:])([/])([/])|)([a-z0-9_-])(.edu|.com|.net)$/;
-	if(urlAddieMatch.test(d))
-	{
-		alert ("Good URL entered ");
-	}else{
-	alert(" URL entered is not valid");}
+function validateZip() {
+    var a = document.orderForm.Zip.value.trim();
+    var zipCodePattern = /^\d{5}$/;
+    if (zipCodePattern.test(a)) {
+        errorFoundZip = false;
+        //alert("Good Zip code entered. ");
+    } else {
+        errorFoundZip = true;
+        alert("The input for Zip code is bad, please enter in a 5 digit number");
+    }
 }
 
-function validateState()
-{
-	var e=document.orderForm.State.value;
-	stateMatch = "wa|or|ca|ak|nv|id|ut|az|hi|mt|wy" +
+function validateNumSamoflanges() {
+    var b = document.orderForm.numSamoflanges.value;
 
-				"co|nm|nd|sd|ne|ks|ok|tx|mn|ia|mo" +
+    if (isNaN(b) || b < 0 || b > 100) {
+        errorFoundSamoCnt = true;
+        alert(" Number of Samoflanges is NOT between 0 -100 range.");
 
-				"ar|la|wi|il|ms|mi|in|ky|tn|al|fl" +
-
-				"ga|sc|nc|oh|wv|va|pa|ny|vt|me|nh" +
-
-				"ma|ri|ct|nj|de|md|dc";
-
+    } else {
+        errorFoundSamoCnt = false
+        //alert("  Number of Samoflanges is between 0-100 range.  Good Number of Samoflanges")
+    }
 
 
-	if (stateMatch.indexOf(e.toLowerCase(e) + "|") > -1) {
+}
+function validateEmail() {
+    var c = document.orderForm.emailAddie.value.trim();
+    var emailAddieMatch = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-		alert ( " Valid State Abbreviations");
+    if (emailAddieMatch.test(c)) {
+        errorFoundEmail = false;
+        //alert("Good Email entered ");
+    } else {
+        errorFoundEmail = true;
+        alert(" Email entered is not valid");
+    }
+}
+// http://cnn.com
+function validateURL() {
+    var myURL = document.orderForm.urlAddie.value.trim();
+    //var urlAddieMatch = /^((http|https)([:])([/])([/])|)([a-z0-9_-])(.edu|.com|.net)$/;
+    var urlAddieMatch = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+    if (urlAddieMatch.test(myURL)) {
+        errorFoundURL = false;
+        //alert("Good URL entered ");
+    } else {
+        errorFoundURL = true;
+        alert("URL entered is not valid");
+    }
+}
 
-		}
+function validateState() {
+    var e = document.orderForm.State.value.trim();
+    stateMatch = "wa|or|ca|ak|nv|id|ut|az|hi|mt|wy|" +
+
+        "co|nm|nd|sd|ne|ks|ok|tx|mn|ia|mo|" +
+
+        "ar|la|wi|il|ms|mi|in|ky|tn|al|fl|" +
+
+        "ga|sc|nc|oh|wv|va|pa|ny|vt|me|nh|" +
+
+        "ma|ri|ct|nj|de|md|dc";
 
 
-		alert ( " Invalid State abbreviations");
+    if (stateMatch.indexOf(e.toLowerCase()) > -1) {
+        errorFoundState = false;
+        //alert(" Valid State Abbreviations");
 
+    } else {
+        errorFoundState = true;
+        alert(" Invalid State abbreviations");
 
-	}
+    }
+}
 
