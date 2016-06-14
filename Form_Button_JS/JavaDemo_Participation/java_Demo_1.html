@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
+
+  Name: KT Chu
+  Current Date: 6/8/2016
+  Class/assigment:
+  CGS1821 / Java Demo
+
+  File name: Java_Demo_1.html
+  Language: HTML5
+
+
+********************************
+  Purpose:
+  To add table to web site
+*******************************
+The website has:
+
+
+-->
+
+<title>Java Demo 1</title> <!-- * A page title -->
+<meta charset="utf-8">   <!-- * The <meta> tag -->
+
+</head>
+<body>
+
+
+<div id="change_Button1">
+<h1> Div Buttton Change 1</h1>
+<p id="pChangeDemo1">This is a base paragraph 1 of text.
+ </p>
+ </div>
+<div id="change_Button2">
+<h1>
+Div Buttton Change 2</h1>
+<p id="pChangeDemo2">This is a base paragraph 2 of text.
+ </p>
+ </div>
+ <button type="button" onclick="myFunction1()">Click to Change paragraph 1 Text</button>
+<button type="button" onclick="myFunction2()">Click to Change paragraph 2 Text</button>
+
+
+<script>
+function myFunction1(){
+	document.getElementById("pChangeDemo1").innerHTML = "The text 1 has changed";
+}
+
+function myFunction2(){
+	document.getElementById("pChangeDemo2").innerHTML = "The text 2 has changed";
+}
+</script>
+
+
+
+
+</body>
+</html>

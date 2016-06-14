@@ -124,15 +124,16 @@ function validateState() {
 
         "ma|ri|ct|nj|de|md|dc";
 
-
-    if (stateMatch.indexOf(e.toLowerCase()) > -1) {
+    if (e == null || e == "") {
+        errorFoundState = true;
+        alert(" Invalid State abbreviations: cannot be empty");
+    }
+    else if (stateMatch.indexOf(e.toLowerCase()) > -1) {
         errorFoundState = false;
         //alert(" Valid State Abbreviations");
-
     } else {
         errorFoundState = true;
         alert(" Invalid State abbreviations");
-
     }
 }
 
