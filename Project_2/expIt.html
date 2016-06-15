@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
+
+  Name: KT Chu
+  Current Date: 6/15/2016
+  Class/assigment:
+  CGS1821 / Project 2
+
+  File name: expIt.html
+  Language: HTML5
+
+  Includes:   mysite.css
+              to add color and font style
+********************************
+  Purpose:
+To work with various ids, styles and descendant styles
+*******************************
+-->
+<title>Devils Millhopper Experience It</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="mysite.css" >
+
+
+  <!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+<![endif]-->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+    <span><a href="#content">Skip to Content</a></span>
+      <h1>Devils Millhopper Geological State Park</h1>
+      <h2>Experience It</h2>
+      <h2 class="place"><br> 4732 Millhopper Rd, Gainesville, FL 32653</h2>
+  <div id="parkInfo">
+        <dl class="parkhours">
+          <dt><br> Hours:<br></dt>
+          <dd> Open 9:00 am to 5:00 pm</dd>
+          <dd>Wednesday through Sunday<br></dd>
+          <dd>The park is closed:<br>Monday and Tuesday<br></dd>
+        </dl>
+
+
+        <dl class="parkfees">
+          <dt><br> Fees: <br></dt>
+          <dd>Admission to the park is $4.00 per vehicle<br></dd>
+          <dd>Up to 8 visitors per vehicle<br></dd>
+          <dd>Pedestrians and bikes are $2.00<br><br></dd>
+        </dl>
+  </div>
+    </header>
+
+    <div id="flexbox_use">
+   <nav>
+   <ul>
+      <li><a href="index.html">  Home&nbsp;&nbsp;  </a></li>
+      <li><a href="history.html">  History&nbsp;&nbsp;  </a></li>
+      <li><a href="expIt.html">  Experience It&nbsp;&nbsp;  </a></li>
+      <li><a href="favorites.html">  Favorites&nbsp;&nbsp;  <br></a></li>
+
+     </ul>
+
+    <img  id= "img_nav" src="images/IMG_20160227_143017.jpg" alt="Forest Scenery">
+    </nav>
+ <main>
+
+    <table>
+<!--********************************************************************
+Table
+      * Table header:activities
+      				what
+      				where
+      				when
+
+      * Table body: info
+      * Table foot: link to www.floridastateparks.org
+
+**************************************************************-->
+
+
+ <caption><br><h2>Activities</h2>
+              <h2> To Experience <br> DEVILS MILLHOPPER<br></h2></caption>
+
+<colgroup>
+  <col span ="1" class = "Activities">
+</colgroup>
+<colgroup>
+  <col span ="1" class = "What">
+  </colgroup>
+<colgroup>
+  <col span ="1" class = "Where">
+  </colgroup>
+<colgroup>
+  <col span ="1" class = "When">
+  </colgroup>
+
+<thead>
+<tr>
+
+    <th>Activities</th>
+    <th>What Is It?</th>
+    <th>Where Is It?</th>
+    <th>When Is It?</th>
+    </tr>
+</thead>
+<tbody>
+
+    <tr>
+      <td>Tour</td>
+      <td>Longleaf pines were seen everywhere in the uplands.
+          As he guided us down the boardwalk, he pointed out the different features of the sink hole.</td>
+      <td>Sinkhole Boardwalk</td>
+      <td>10 a.m. Saturday</td>
+    </tr>
+    <tr>
+      <td>Hiking</td>
+      <td>Spring, summer, fall, winter at Devils Millhopper will amaze your senses and fill you with the sights and sounds of the flowers, squirrels, pines, sounds of water falls.</td>
+      <td>Half mile hiking trail</td>
+      <td>Park Hours: see above<br>
+
+    </tr>
+    <tr>
+      <td>Picnicking</td>
+      <td>There are picnic tables and places to gather with friends to enjoy the park.</td>
+      <td>Picnic area</td>
+      <td>Park Hours: see above</td>
+
+    </tr>
+    <tr>
+      <td>Wildlife Viewing</td>
+      <td>Deer, squirrels, birds, flowers, pines, and Florida native plants beckon all to experience.</td>
+      <td>Wildlife trails, boardwalk, sinkhole</td>
+      <td>Park hours: see above</td>
+
+    </tr>
+    <tr>
+      <td>Visitor Center</td>
+      <td>Learn the geological story of Devils Millhopper through audio and visual exhibits.</td>
+      <td>Front of park</td>
+      <td>Park hours: see above</td>
+    </tr>
+
+</tbody>
+<tfoot>
+<tr>
+<td colspan="4">
+<a href="https://www.floridastateparks.org/park/Devils-Millhopper">Learn Florida Parks:  www.floridastateparks.org </a>
+</td>
+</tr>
+</tfoot>
+
+</table>
+</main>
+
+</div>
+<div>
+<br><form  name=campForm method="post" action="sub_form.php" onsubmit="return check_validations();">
+<br><br><h2>Enjoy Florida Parks</h2>
+<fieldset id="camper_Information">
+<legend>Flordia Parks Reservations</legend>
+
+	<br><label>Amenities</label>
+
+	<select>
+		<option value = "select_one">Select One Amenities</option>
+		<option value = "ampitheater">Amphitheater</option>
+		<option value = "beach">Beach</option>
+		<option value = "cabins">Cabins</option>
+		<option value = "camping">Camping</option>
+		<option value = "Tours">Tours</option>
+
+	</select>
+	<br><br><label for = "arrival_Date">Activity Dates:<br> Arrival Date:</label>
+	<input type="date"  name= "arrival_Date" id="arrival_Date">
+	<label for ="departure_Date">&nbsp;&nbsp;&nbsp;&nbsp;Departure Date</label>
+	<input type="date" name="departure_Date" id ="departure_Date">
+	<br><br><label>Number of Camping Spaces:<br>  Choose a number between 1 and 10</label>
+	<input type="number" name="camping_Spaces" id ="camping_Spaces" min ="1" max="10">
+
+
+</fieldset>
+<fieldset id="camper_Information">
+<legend>Camper Information</legend>
+
+            <br><br><label for="Fname">First Name: </label>
+            <input type="text" name="Fname" id="Fname" onchange="validateFname()">
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="Lname">&nbsp;&nbsp;Last Name: </label>
+            <input type="text" name="Lname" id="Lname" onchange="validateLname()">
+
+            <br><br><label for="emailAddie">Email:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+            &nbsp;&nbsp;<input type="email" name="emailAddie" id="emailAddie" onchange="validateEmail()" placeholder="your@email.com">
+
+            <br><br><label for="mailAddie">Address: &nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="mailAddie" id="mailAddie" onchange="validateAddress()">
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="City">&nbsp;&nbsp;City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="City" id="City" onchange="validateCity()">
+
+            <br><br><label for="State">State: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="State" id="State" onchange="validateState()">
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="Zip">&nbsp;&nbsp;Zip: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" name="Zip" id="Zip" onchange="validateZip()" required>
+
+            <br><br><br><label for="phoneNum">Telephone Number: </label>
+            <input type="tel" name="phoneNum" id="phoneNum" required>
+            <br><br><label>Contact Me: </label><br>
+            <input type="radio" name="contactMe" value="by Email">Yes by Email<br>
+
+            <input type="radio" name="contactMe" value="by Phone">Yes by Phone<br>
+
+            <input type="radio" name="contactMe" value="by Email or Phone">Yes by Email or Phone<br>
+
+            <input type="radio" name="contactMe" value="no">No, Do Not Contact Me<br>
+
+       <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+</fieldset>
+</form>
+</div>
+<div>
+
+<h2><br><br>Devils Millhopper Tour</h2><br>
+
+<p class="tourSummary">
+
+<img  id="floatright" src="images/IMG_20160227_142724.jpg"  alt="Forest Scenery">
+
+          <br>
+          The tour was wonderful.  The guide started with an overview of the sinkhole and the uplands surrounding the sinkhole.<br>  He pointed out the spruce pines and the chestnut oaks in the uplands.  There were orchids, and needle palms.  Longleaf pines were seen everywhere in the uplands.<br>
+            As he guided us down the boardwalk, he pointed out the different features of the sink hole.  The Indian hunted around the creeks of the sinkhole because the deer came to drink the water from the streams.  Lush ferns painted the cavity wall with a lush green, and feeding off the water of the creeks.  Needle palms and orchids were scattered with the ferns giving a beautiful wall to the sink hole.<br>
+            He explained how the sinkhole was formed.  The rainwater became slightly acidic as it seeps thru the dead plants layers on the ground.  The slightly acidic water then dissolved the underlying limestone bedrock forming a huge cavern.  Eventually when there not enough limestone to support the weight of the land above the ceiling of the limestone collapsed forming the sinkhole.<br>
+            Then he told the legends of the name of the sinkhole, Devils Millhopper.<br><br>
+
+        <a href="https://www.floridastateparks.org/park/Devils-Millhopper">Learn Florida Parks:  www.floridastateparks.org </a>
+
+</p>
+</div>
+
+
+
+    <footer >
+      Copyright &copy; 2016 Kim Chu <br><a href="mailto:kim@chucrew.net">kim@chucrew.net</a>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
