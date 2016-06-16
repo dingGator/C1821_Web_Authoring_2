@@ -161,11 +161,11 @@ Table
 </div>
 <div>
 <br><form  name=campForm method="post" action="sub_form.php" onsubmit="return check_validations();">
-<br><br><h2>Enjoy Florida Parks</h2>
-<fieldset id="camper_Information">
+<br><br><h2 id="form_reservation">Enjoy Florida Parks</h2>
+<fieldset id="reservation_Information">
 <legend>Flordia Parks Reservations</legend>
 
-	<br><label>Amenities</label>
+	<br><label for ="reservation_amenities">Amenities</label>
 
 	<select>
 		<option value = "select_one">Select One Amenities</option>
@@ -180,19 +180,19 @@ Table
 	<input type="date"  name= "arrival_Date" id="arrival_Date">
 	<label for ="departure_Date">&nbsp;&nbsp;&nbsp;&nbsp;Departure Date</label>
 	<input type="date" name="departure_Date" id ="departure_Date">
-	<br><br><label>Number of Camping Spaces:<br>  Choose a number between 1 and 10</label>
+	<br><br><label for = "camping_Spaces">Number of Camping Spaces:<br>  Choose a number between 1 and 10</label>
 	<input type="number" name="camping_Spaces" id ="camping_Spaces" min ="1" max="10">
 
 
 </fieldset>
-<fieldset id="camper_Information">
+<fieldset id="camper_Information2">
 <legend>Camper Information</legend>
 
             <br><br><label for="Fname">First Name: </label>
             <input type="text" name="Fname" id="Fname" onchange="validateFname()">
 
 
-            &nbsp;&nbsp;&nbsp;&nbsp;<label for="Lname">&nbsp;&nbsp;Last Name: </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="Lname">&nbsp;&nbsp;&nbsp;Last Name: </label>
             <input type="text" name="Lname" id="Lname" onchange="validateLname()">
 
             <br><br><label for="emailAddie">Email:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>

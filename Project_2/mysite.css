@@ -510,18 +510,32 @@ tag: #customer_Information
    background-color: #edfafb   Light grayish cyan.
 *****************/
 
-#camper_Information  {
+#reservation_Information, #camper_Information2   {
   border-radius: 20px;
-    background-color: #edfafb;
+    background-color:#d8ded8;
 }
+
 /****************************
 tag: #customer_Information input
   background-color: #f2dee3   Light grayish red.
 *****************/
-#camper_Information input{
+#camper_Information2 input ,#reservation_Information input{
   border-radius: 20px;
   background-color: #f2dee3;
 }
+#form_reservation {
+   font-size: 30px;
+}
+button {
+  background-color: #2ab5be;
+  color: #FFFFFF;
+  padding: 10px 22px;
+  text-align:center;
+  display: inline-block;
+  border-radius: 12px;
+
+}
+
 /********************************************
 * tag: footer
 *  The footer color is very dark gray
