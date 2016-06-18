@@ -1,0 +1,308 @@
+/*******************************
+
+   CGS1820
+   Class Project #4 Excercise 6
+   Chapter 3 Hands-On Practices
+
+   Author: KT Chu
+   Date: 5/17/2016
+
+   File name: my_Singer1.css
+   Supporting files:	singer.html
+   Purpose:
+   To use CSS style sheet to add
+   colors and styles to HTML
+**************************************
+*/
+
+/********************************************
+*tag:header, main, nav, footer, figure, figcaption:
+* use display: block for all elements
+*****************************************/
+
+
+header, main, footer { display: block; }
+/********************************************
+* tag:body
+ has background color of light grayish yellow
+*****************************************/
+
+body { background-color: #fafae6;
+    }
+
+/********************************************
+*  tag: header, h1,#wrapper
+*   use googlefonts in header h1 and wrapper
+*****************************************/
+header, h1,#wrapper { margin-top: 0;
+  font-family: 'Libre Baskerville';
+}
+
+/********************************************
+* tag: wrapper
+* have background color of light grayish blue
+
+*****************************************/
+#wrapper {  background-color: #E6E6FA;
+  width:90%;
+  margin:auto;
+border-radius: 2%;
+}
+
+/********************************************
+* tag: floatright
+for the image in the main next to the table
+it floats right
+*****************************************/
+
+#floatright {
+  margin: 10%;
+  float: right;
+}
+/********************************************
+* tag: floatImg
+for the image in the Favorite Song part
+it floats right
+*****************************************/
+
+#floatImg {
+  margin: 10%;
+  float: right;
+}
+/********************************************
+* tag: h1
+  background-color: very dark blue
+    word color:  light grayish blue
+    text-shadow: light gray
+
+*****************************************/
+
+
+h1 {  background-color: #191970;
+    color:  #E6E6FA;
+    padding: 1% 0;
+    font-size: 200%;
+    text-shadow: 3px 3px 5px #CCCCCC;
+    text-align: center;
+    border-radius: 25%;
+}
+
+/*************************************
+*h2 second line
+word color: very dark blue;
+*************************************/
+
+h2 {
+    color:  #191970;
+    font-family:  Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 0 0 0;
+}
+/********************************************
+* tag:h3
+* the title of the paragraphs
+*****************************************/
+
+h3{ text-align: center;
+  font-size: 1.15em;
+ }
+
+
+ /******************************************
+Table
+    1.  List five works by them
+    2.  Three Columns
+      * Title
+      * Date of Release
+      * Chart Entries
+
+    4.  Use the following elements correctly.
+      * Table element
+              border: 5px solid vry dark blue
+      * Table head
+      * Table body
+      * Table foot
+      * Table header
+      * Table row
+      * Table data
+
+tag: table, td, th
+  border: very dark blue
+  word color: very dark gray
+tag: caption
+  word color: very dark gray
+tag: tfoot
+  word color: very dark gray;
+tag: altrow
+  background-color: very light gray;
+****************************************/
+table { margin: auto;
+    border: 5px solid #000066;
+    width: 600px;
+}
+table, td, th { padding: 0.5em;
+         border: 1px solid #000066;
+         font-family: Arial, sans-serif;
+         font-weight: bold;
+         color: #333333;
+}
+caption { font-family: Verdana, sans-serif;
+          font-weight: bold;
+          font-size: 1.2em;
+          padding-bottom: 0.5em;
+          color: #333333;
+}
+tfoot { font-family: Verdana, sans-serif;
+          font-weight: bold;
+          font-size: 0.7em;
+          color: #333333;
+}
+.altrow {background-color: #eaeaea; }
+/********************************************
+* tag: flexbox_use
+* the webpages is configured for size greater ****
+*  this is to use the webkit &flexbox to configure website
+*  into two or three columns websites
+*  and to use with @media & flexbox to configure
+*  webpage for tablet (1024)and mobile(768)
+*****************************************/
+
+#flexbox_use {
+        width: 100%;
+        display: -webkit-flex;
+        display: flex;
+       -webkit-flex-direction:row;
+        flex-direction: row;
+
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom-width: 30px;
+    margin-top: 30px;
+    border-top-width: 30px;
+    padding-top: 30px;
+
+     }
+
+main { padding:0 0; }
+
+/********************************************
+* tag: p
+*   the description paragraphs
+    word color: very dark gray
+  tag: goldword
+    text shadow: pure yellow
+    word color: very dark gray
+****************************************/
+p {color: #333333;
+  text-align: center;
+  text-indent: 3em;
+  }
+
+.goldWord {text-shadow: 3px 3px 5px #ffd700;
+  color:#333333;
+}
+
+ul {list-style-type: none;
+}
+
+/********************************************
+* use the webkit & flexbox to configure website
+*to format webpage to two columns or three columns
+*  and to use with @media to configure for
+*  this is to use the flexbox to configure
+*  website for tablet (1024)and mobile(768)
+*
+
+note:  flex and webkit-flex: should add up to 10;
+****************************************/
+main {
+  -webkit-flex:7;
+flex:7;
+}
+
+aside {
+  -webkit-flex:3;
+flex:3;
+}
+
+
+/********************************************
+* tag: .favorites
+*  the list of favorite songs
+*
+****************************************/
+.favorites {
+      width: 70%;
+      font-size: 1em;
+}
+/********************************************
+* tag: .favoritePoints img
+*  the images of George Strait
+*
+****************************************/
+
+.favorites img {width: 30%;}
+
+.fade {
+  opacity:0.4;
+}
+.fade:hover {
+          opacity: 1.0;
+          transition-duration: 2s;}
+/********************************************
+* tag: main a
+*color is dark lime green for <a> tag in main
+****************************************/
+main a{color:#006600;
+  text-decoration: none;}
+
+
+/********************************************
+* tag: img
+*  The images of the page
+  box-shadow: pure yellow ;
+****************************************/
+
+img { width: 80%;
+ box-shadow: 2px 1px 7px 5px #ffd700;
+ border-radius: 20%;
+
+}
+
+
+/********************************************
+* tag: footer
+*  The footer color is very dark gray
+****************************************/
+
+footer {
+      color: #333333;
+      font-size: 100%;
+      font-style: italic;
+    text-align: center;
+    padding: 2.5%;
+}
+/****************************
+*  this is to use the @media to configure
+*  webpages for tablet (1024)and mobile(768)
+****************************************/
+
+@media only screen and (max-width: 1024px) {
+      #flexbox_use { -webkit-flex-direction: column;
+        flex-direction: column;}
+            body { margin: 0; padding: 1em; }
+            #wrapper { width: auto;
+              margin:0;}
+        h1 { font-size: 200%; }
+      main {padding:1em;}
+      img {width: 70%;}
+
+
+     }
+
+@media only screen and (max-width: 768px) {
+}
+
+
+

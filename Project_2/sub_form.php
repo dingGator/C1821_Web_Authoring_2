@@ -18,13 +18,8 @@ print 'You are located at: '.$_POST['mailAddie'].'<br>'.$_POST['City'].', '.$_PO
 
 print '<br><br>You can be reached by email at '.$_POST['emailAddie'].' or phone at '.$_POST['phoneNum'].'<br>';
 
-$tmp = $_POST['camping_Spaces'];
 
-if($tmp==1){
-	print '<h3>Your reservation of 1 camp space is comfirmed.</h3>';
-}else{
-	print '<h3>Your reservation of '.$tmp.'</h3>' ;
-}
+print '<br><br> Your reservation of '.$_POST['camping_Spaces'].' of '$_POST['reservation_amenities'].' from '.$_POST['arrival_Date'].' to '.$_POST['departure_Date'].'<br>';
 
 
 $tmp = $_POST['contactMe'];
