@@ -229,8 +229,10 @@ ul{
   font-weight: bold;
 }
 
-nav{display:block;
-margin: auto;}
+nav{
+  display:block;
+
+}
 
 nav img{ margin: 10%; }
 
@@ -443,19 +445,15 @@ form { background-color:#eaeaea;
   border-radius: 20px;}
 
 label {
-  width: 100px;
-    clear: left;
+columns: 50px;
+  clear: left;
   text-align: right;
   padding-right: 10px;
   margin-top: 10px; }
 
-input {
-        width:180px;
-        margin: 0;
-        -webkit-box-sizing:   border-box;
-          -moz-box-sizing:  border-box;
-                box-sizing:   border-box;
-                 }
+input{
+  width: 200px;
+}
 
 /***********************
 #ff0000 solid red
@@ -511,6 +509,7 @@ tag: #customer_Information
 *****************/
 
 #reservation_Information, #camper_Information2   {
+
   border-radius: 20px;
     background-color:#d8ded8;
 }
@@ -519,12 +518,19 @@ tag: #customer_Information
 tag: #customer_Information input
   background-color: #f2dee3   Light grayish red.
 *****************/
-#camper_Information2 input ,#reservation_Information input{
+#camper_Information2 input ,#reservation_Information input, textarea{
+
   border-radius: 20px;
   background-color: #f2dee3;
 }
+
 #form_reservation {
-   font-size: 30px;
+ width: 800px;
+ margin: 0;
+        -webkit-box-sizing:   border-box;
+          -moz-box-sizing:  border-box;
+                box-sizing:   border-box;
+   font-size: 20px;
 }
 button {
   background-color: #2ab5be;

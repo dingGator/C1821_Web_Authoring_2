@@ -71,11 +71,11 @@ input {
                 		box-sizing:		border-box;
                  }
 
-input:invalid {
+input.invalid {
 	border: 1px solid red;
 }
 
-input:valid {
+input.valid {
 	border: 1px solid green;
 }
 

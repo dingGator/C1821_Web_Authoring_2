@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
+
+  Name: KT Chu
+  Current Date: 6/15/2016
+  Class/assigment:
+  CGS1821 / Project 2
+
+  File name: expIt.html
+  Language: HTML5
+
+  Includes:   mysite.css
+              to add color and font style
+********************************
+  Purpose:
+To work with various ids, styles and descendant styles
+*******************************
+-->
+<title>Devils Millhopper Reserve It</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="mysite.css" >
+
+<script src="myScript_Proj_2.js"></script>
+  <!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+<![endif]-->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+    <span><a href="#content">Skip to Content</a></span>
+      <h1>Devils Millhopper Geological State Park</h1>
+      <h2>Experience It</h2>
+      <h2 class="place"><br> 4732 Millhopper Rd, Gainesville, FL 32653</h2>
+  <div id="parkInfo">
+        <dl class="parkhours">
+          <dt><br> Hours:<br></dt>
+          <dd> Open 9:00 am to 5:00 pm</dd>
+          <dd>Wednesday through Sunday<br></dd>
+          <dd>The park is closed:<br>Monday and Tuesday<br></dd>
+        </dl>
+
+
+        <dl class="parkfees">
+          <dt><br> Fees: <br></dt>
+          <dd>Admission to the park is $4.00 per vehicle<br></dd>
+          <dd>Up to 8 visitors per vehicle<br></dd>
+          <dd>Pedestrians and bikes are $2.00<br><br></dd>
+        </dl>
+  </div>
+    </header>
+
+    <div id="flexbox_use">
+   <nav>
+   <ul>
+      <li><a href="index.html">  Home&nbsp;&nbsp;  </a></li>
+      <li><a href="history.html">  History&nbsp;&nbsp;  </a></li>
+      <li><a href="expIt.html">  Experience It&nbsp;&nbsp;  </a></li>
+      <li><a href="favorites.html">  Favorites&nbsp;&nbsp;  <br></a></li>
+      <li><a href="reserveIt.html">  Reserve It&nbsp;&nbsp;<br></a></li>
+
+     </ul>
+
+    <img  id= "img_nav" src="images/IMG_20160227_143017.jpg" alt="Forest Scenery">
+    </nav>
+ <main>
+
+
+
+
+<br><form  name=campForm method="post" action="sub_form.php" onsubmit="return check_validations();">
+<br><br><h2 id="form_reservation">Enjoy Florida Parks</h2>
+<fieldset id="reservation_Information">
+<legend>Flordia Parks Reservations</legend>
+
+  <br><label for ="reservation_amenities">Amenities</label>
+
+  <select name = "select_amenities" required>
+    <option  value = "select_one">Select One Amenities</option>
+    <option  value = "lodge">Lodge</option>
+    <option  value = "canoe">Canoe</option>
+    <option  value = "cabin">Cabin</option>
+    <option  value = "camp_site">Camp Site</option>
+    <option  value = "tour">Tour</option>
+
+  </select>
+  <br><br><label for = "arrival_Date">Activity Dates:<br> Arrival Date:</label>
+  <input type="date"  name= "arrival_Date" id="arrival_Date"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateArivalDate()"  required>
+
+  <label for ="depart_Date">
+  &nbsp;&nbsp;&nbsp;&nbsp;Departure Date</label>
+  <input type="date" name="depart_Date" id ="depart_Date"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateDepartDate()" required>
+
+  <br><br><label for = "camping_Spaces">Number of Camping Spaces:<br>  Choose a number between 1 and 10</label>
+  <input type="number" name="camping_Spaces" id ="camping_Spaces" min ="1" max="10" required>
+
+
+</fieldset>
+<fieldset id="camper_Information2">
+<legend>Camper Information</legend>
+
+            <br><br><label for="Fname">First Name: </label>
+            <input type="text" name="Fname" id="Fname" onchange="validateFname()" required>
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="Lname">
+            &nbsp;&nbsp;&nbsp;Last Name: </label>
+            <input type="text" name="Lname" id="Lname" onchange="validateLname()" required>
+
+            <br><br><label for="emailAddie">
+            Email:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+            &nbsp;&nbsp;<input type="email" name="emailAddie" id="emailAddie" onchange="validateEmail()" placeholder="your@email.com" required>
+
+            <br><br><label for="mailAddie">
+            Address: &nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="mailAddie" id="mailAddie" onchange="validateAddress()" required>
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="City">
+            &nbsp;&nbsp;City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="City" id="City" onchange="validateCity()" required>
+
+            <br><br><label for="State">
+            State: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="State" id="State" onchange="validateState()" minlength="2" placeholder="aa" required>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="Zip">
+            &nbsp;&nbsp;Zip: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="Zip" id="Zip" onchange="validateZip()"  placeholder="XXXXX-XXXX" required>
+
+            <br><br><br><label for="phoneNum">Telephone Number: </label>
+            <input type="tel" name="phoneNum" id="phoneNum" onchange="validatePhoneNumber()"  placeholder="XXX-XXX-XXXX" required>
+            <br><br><label>Contact Me: </label><br>
+            <input type="radio" name="contactMe" value="by Email">Yes by Email<br>
+
+            <input type="radio" name="contactMe" value="by Phone">Yes by Phone<br>
+
+            <input type="radio" name="contactMe" value="by Email or Phone">Yes by Email or Phone<br>
+
+            <input type="radio" name="contactMe" value="no">No, Do Not Contact Me<br>
+
+            <br><label for ="comments">Comments: <br> Please add any extra instruction to help us<br> make your stay with us excellent, <br>or no comments</label><br>
+            <textarea name="comments" id="comments" rows="4" cols="40" placeholder="no comments" required></textarea><br>
+
+       <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+</fieldset>
+</form>
+</div>
+</main>
+
+    <footer >
+      Copyright &copy; 2016 Kim Chu <br><a href="mailto:kim@chucrew.net">kim@chucrew.net</a>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
