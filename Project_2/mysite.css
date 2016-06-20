@@ -13,6 +13,7 @@
    						history.html
    						expIt.html
    						favorites.html
+              reserveIt.html
    Purpose:
    To use CSS style sheet to add
    colors and styles to HTML
@@ -444,16 +445,24 @@ form { background-color:#eaeaea;
     padding: 10px;
   border-radius: 20px;}
 
-label {
-columns: 50px;
-  clear: left;
+
+label { float: left;
+  width: 30%;
+    clear: left;
   text-align: right;
   padding-right: 10px;
   margin-top: 10px; }
+input, textarea, select  {
+                  width:180px;
+                  margin:0;
+                  -webkit-box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+                  margin-top: 10px;
+                   }
 
-input{
-  width: 200px;
-}
+
+#mySubmit { margin-left: 110px; }
 
 /***********************
 #ff0000 solid red
@@ -466,7 +475,7 @@ input.invalid {
 *****************/
 
 input.valid {
-  border: 1px solid green;
+  border: 1px #00ff00;
 }
 /***********************
 #990000   dark red
@@ -530,8 +539,29 @@ tag: #customer_Information input
         -webkit-box-sizing:   border-box;
           -moz-box-sizing:  border-box;
                 box-sizing:   border-box;
-   font-size: 20px;
+   font-size: 18px;
 }
+
+/****************************
+tag:#contactMe
+  background-color: #f2c3f0    Light grayish magenta.
+
+*****************
+
+#contactMe {
+margin-right: 50px;
+margin-left:100px;
+
+}
+**/
+input[type="radio"]{
+
+    width: 100px;
+    margin-left: 160px;
+    margin-right: 0px;
+
+}
+
 button {
   background-color: #2ab5be;
   color: #FFFFFF;

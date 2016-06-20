@@ -121,13 +121,13 @@ function validateZip() {
 function validatePhoneNumber() {
     var a = document.orderForm.phoneNum.value.trim();
 
-    var phoneNum10 = /^\d{3}-\d{3}-\d{4}$|/
+    var phoneNum10 = /^\d{3}-\d{3}-\d{4}$/
     if (phoneNum10.test(a)) {
         errorFoundPhone = false;
         //alert("Good Zip code entered. ");
     } else {
         errorFoundPhone = true;
-        alert("The input for Phone Number is bad, please enter in a XXX+XXX+XXXX number");
+        alert("The input for Phone Number is bad, please enter in a XXX-XXX-XXXX number");
     }
 }
 
@@ -138,27 +138,32 @@ function validateArivalDate() {
 // regular expression to match required date format
     re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
-    if(form.arrival_Date.value != '') {
-      if(regs = form.arrival_Date.value.match(re)) {
-        // day value between 1 and 31
-        if(regs[1] < 1 || regs[1] > 31) {
-          alert("Invalid value for day: " + regs[1]);
-          form.arrival_Date.focus();
+    if(a != '') {
+
+      if(regs = document.orderForm.arrival_Date.value.match(re)) {
+
+
+        // month value between 1 and 12
+        if(regs[1] < 1 || regs[1] > 12) {
+          alert("Invalid value for month: " + regs[2]);
+          document.orderForm.arrival_Date.focus();
           errorFoundArrrivalDate = true;
         }
-        // month value between 1 and 12
-        if(regs[2] < 1 || regs[2] > 12) {
-          alert("Invalid value for month: " + regs[2]);
-          form.arrival_Date.focus();
+         // day value between 1 and 31
+        if(regs[2] < 1 || regs[2] > 31) {
+          alert("Invalid value for day: " + regs[1]);
+          document.orderForm.arrival_Date.focus();
           errorFoundArrrivalDate = true;
         }
         // year value between future year
         if( regs[3] > (new Date()).getFullYear()) {
           alert("Invalid value for year: " + regs[3] + " - must be in the Future " + (new Date()).getFullYear());
-          form.arrival_Date.focus();
-          errorFoundArrrivalDate = true;
+          document.orderForm.arrival_Date.focus();
+          errorFoundArrrivalDate = true;}
 
-}}}}
+console.log("match arrival date format");}
+console.log(" arrival date is not blank ");}
+}
 
 function validateDepartDate()
 {
@@ -167,36 +172,41 @@ function validateDepartDate()
 // regular expression to match required date format
     re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
-    if(form.depart_Date.value != '') {
-      if(regs = form.depart_Date.value.match(re)) {
-        // day value between 1 and 31
-        if(regs[1] < 1 || regs[1] > 31) {
-          alert("Invalid value for day: " + regs[1]);
-          form.depart_Date.focus();
+    if(a != '') {
+      if(regs = document.orderForm.depart_Date.value.match(re)) {
+
+        // month value between 1 and 12
+        if(regs[1] < 1 || regs[1] > 12) {
+          alert("Invalid value for month: " + regs[2]);
+          document.orderForm.depart_Date.focus();
           errorFoundDepartDate = true;
         }
-        // month value between 1 and 12
-        if(regs[2] < 1 || regs[2] > 12) {
-          alert("Invalid value for month: " + regs[2]);
-          form.depart_Date.focus();
+                // day value between 1 and 31
+        if(regs[2] < 1 || regs[2] > 31) {
+          alert("Invalid value for day: " + regs[1]);
+          document.orderForm.depart_Date.focus();
           errorFoundDepartDate = true;
         }
         // year value between 1902 and 2016
         if( regs[3] > (new Date()).getFullYear()) {
           alert("Invalid value for year: " + regs[3] + " - must be in the Future " + (new Date()).getFullYear());
-          form.depart_Date.focus();
-          errorFoundDepartDate = true;
-
-}}}}
+          document.orderForm.depart_Date.focus();
+          errorFoundDepartDate = true;}
+          console.log("match depart date format");}
+console.log(" depart date is not blank ");}}
 //validate amenity
 function validateSelectAmenity()
 {
-    // var a = document.orderForm.select_Amenity.value.trim();
- if((document.orderForm.select_Amenity)[0].value == 'blank')
+     var a = document.orderForm.select_Amenity.value.trim();
+
+ if(a == 'blank')
 {
 alert("Please select an Amenity to Reserve ");
 errorFoundSelectAmenity = true;
+}else {
+    console.log("amenity selected");
 }
+
 }
 // validate contactMe
 function validateContactMe()
@@ -220,6 +230,9 @@ function validateAmenityNum()
     var num = document.orderForm.amenity_Num.value.trim();
     if (num == 0||num==null||num>10)
     {
+        alert("Amenity number cannot not be blank or 0 or greater than 10.")
         errorFoundAmenityNum = true;
     }
+console.log("amenity number is good.")
+
 }

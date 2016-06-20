@@ -67,21 +67,21 @@ To work with various ids, styles and descendant styles
       <li><a href="history.html">  History&nbsp;&nbsp;  </a></li>
       <li><a href="expIt.html">  Experience It&nbsp;&nbsp;  </a></li>
       <li><a href="favorites.html">  Favorites&nbsp;&nbsp;  </a></li>
-      <li><a href="reserveIt.html">  Reserve It&nbsp;&nbsp;<br></a></li>
+      <li><a href="reserveItTest.html">  Reserve It&nbsp;&nbsp;<br></a></li>
     </ul>
 <img  id= "img_nav" src="images/IMG_20160227_143017.jpg" alt="Forest Scenery">
     </nav>
     <main>
 
 
-<form  id="form_reservation" name= "form_reservation" method="post" action="sub_form.php" onsubmit="return check_validations();">
+<form  id="form_reservation" name= "orderForm" method="post" action="sub_form.php" onsubmit="return check_validations();">
 <br><h2 >Reserve Devils Millhopper Test Park</h2><br>
 <fieldset id="reservation_Information">
 <legend>Devils Millhopper Park Reservations</legend>
 
   <label >Amenities</label>
 
-  <select name = "select_Amenity" onchange ="validateSelect_Amenity()">
+  <select name = "select_Amenity" onchange ="validateSelectAmenity()">
     <option  value = "blank">Select One Amenity</option>
     <option  value = "horses">Horses</option>
     <option  value = "canoe">Canoes</option>
@@ -91,13 +91,13 @@ To work with various ids, styles and descendant styles
 
   </select>
   <br><br><label for = "arrival_Date">Activity Dates:<br> Arrival Date:</label>
-  <input type="text" name= "arrival_Date" id="arrival_Date"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateArivalDate()"  >
+  <br><input type="text" name= "arrival_Date" id="arrival_Date" placeholder="mm/dd/yyyy"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateArivalDate()"  >
 
-  <br><label for ="depart_Date">Departure Date</label>
-  <input type="text" name="depart_Date" id ="depart_Date"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateDepartDate()" >
+  <br><label for ="depart_Date">Departure Date:</label>
+  <input type="text" name="depart_Date" id ="depart_Date" placeholder="mm/dd/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateDepartDate()" >
 
-  <br><br><label for = "amenity_Num">Number of Amenity To Reserve:<br>  Choose a number between 1 and 10</label>
-  <input type="number" name="amenity_Num" id ="amenity_Num" min ="1" max="10" onchange = "validateAnenityNum()" >
+  <br><br><label for = "amenity_Num">Number of Amenity To Reserve<br>  Choose a number between 1 and 10:</label>
+  <br><br><br><input type="number" name="amenity_Num" id ="amenity_Num" min ="1" max="10" onchange = "validateAmenityNum()" >
 
 
 </fieldset>
@@ -130,17 +130,17 @@ To work with various ids, styles and descendant styles
             <br><br><label for="phoneNum">Telephone Number: </label>
             <input type="tel" name="phoneNum" id="phoneNum" onchange="validatePhoneNumber()"  placeholder="XXX-XXX-XXXX" >
 
-            <br><br><label >Contact Me: </label>
-            <br><input type="radio" name="contactMe" value="by Email">Yes by Email
+            <br><br><label >Contact Me: </label><br><br>
+            <input type="radio" name="contactMe"  value="by Email">Yes by Email<br>
 
-            <br><input type="radio" name="contactMe" value="by Phone">Yes by Phone
+            <input type="radio" name="contactMe"   value="by Phone">Yes by Phone<br>
 
-            <br><input type="radio" name="contactMe" value="by Email or Phone">Yes by Email or Phone
+            <input type="radio" name="contactMe"  value="by Email or Phone">Yes by Email or Phone<br>
 
-            <br><input type="radio" name="contactMe" value="no">No, Do Not Contact Me
+            <input type="radio" name="contactMe"  value="no">No, Do Not Contact Me<br>
 
-            <br><label for ="comments">Comments: <br> Please add any extra instruction to help us<br> make your stay with us excellent, <br>or no comments</label><br>
-            <textarea name="comments" id="comments" rows="4" cols="40" placeholder="No Comments" ></textarea><br>
+            <br><label for ="comments">Comments: <br> Please add any extra instruction to help us<br> make your stay with us excellent, <br>or no comments:</label><br>
+            <br><br><br><textarea name="comments" id="comments" rows="4" cols="40" placeholder="No Comments" ></textarea><br>
 
        <button type="submit">Submit</button>
         <button type="reset">Reset</button>
