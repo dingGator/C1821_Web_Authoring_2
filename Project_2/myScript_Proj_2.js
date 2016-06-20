@@ -16,13 +16,52 @@ var errorFoundContactMe = false;
 
 function check_validations() {
 
-    if ( errorFoundSelectAmenity|| errorFoundAmenityNum||errorFoundFname || errorFoundLname ||  errorFoundEmail ||errorFoundAddress||errorFoundCity ||errorFoundState || errorFoundZip ||errorFoundArrivalDate||errorFoundDepartDate || errorFoundContactMe) {
-        alert("Please check each field for errors.");
-        return false;
-    }
+    if ( errorFoundSelectAmenity){
+        alert("Please check the Select Amenity field for errors.");
+        return false;}
+    else if ( errorFoundArrivalDate) {
+        alert("Please check the Arrival field for errors.");
+        return true;}
+    else if ( errorFoundDepartDate ) {
+        alert("Please check the Departure field for errors.");
+        return true;}
+    else if ( errorFoundAmenityNum) {
+        alert("Please check the Amenity Number field for errors.");
+        return true;}
+    else if ( errorFoundFname ) {
+        alert("Please check the First Name field for errors.");
+        return true;}
+    else if ( errorFoundLname ) {
+        alert("Please check the Last Name field for errors.");
+        return true;}
+    else if ( errorFoundEmail ) {
+        alert("Please check the Email field for errors.");
+        return true;}
+    else if ( errorFoundAddress) {
+        alert("Please check the Address field for errors.");
+        return true;}
+    else if ( errorFoundCity ) {
+        alert("Please check the City field for errors.");
+        return true;}
+    else if ( errorFoundState ) {
+        alert("Please check the State field for errors.");
+        return true;}
+    else if ( errorFoundZip ) {
+        alert("Please check the Zip Code field for errors.");
+        return true;}
+
+    else if ( errorFoundContactMe) {
+        alert("Please check the Contact Me field for errors.");
+        return true;}
+
+    else if ( errorFoundComments ){
+     alert("Please check the Comments field for errors.");
+
+        return true;}
     else {
-        return true;
-    }
+    console.log(" all fields are correct");
+         return false;}
+
 }
 
 function validateFname() {
@@ -32,8 +71,10 @@ function validateFname() {
         alert("The First Name field cannot be empty.");
     } else {
         errorFoundFname = false;
+        console.log(" first name field is good");}
+
     }
-}
+
 
 function validateLname() {
     var a = document.orderForm.Lname.value.trim();
@@ -42,7 +83,7 @@ function validateLname() {
         alert("The Last Name field cannot be empty.");
     } else {
         errorFoundLname = false;
-    }
+        console.log(" last name field is good");}
 }
 
 function validateEmail() {
@@ -51,6 +92,7 @@ function validateEmail() {
 
     if (emailAddieMatch.test(c)) {
         errorFoundEmail = false;
+        console.log(" email field is good");
         //alert("Good Email entered ");
     } else {
         errorFoundEmail = true;
@@ -65,7 +107,8 @@ function validateAddress() {
         alert("The Address field cannot be empty.");
     } else {
         errorFoundAddress = false;
-    }
+        console.log(" Address field is good");}
+
 }
 
 function validateCity() {
@@ -75,7 +118,8 @@ function validateCity() {
         alert("The City field cannot be empty.");
     } else {
         errorFoundCity = false;
-    }
+        console.log(" City field is good");}
+
 }
 function validateState() {
     var e = document.orderForm.State.value.trim();
@@ -95,6 +139,7 @@ function validateState() {
     }
     else if (stateMatch.indexOf(e.toLowerCase()) > -1) {
         errorFoundState = false;
+        console.log(" State field is good");
         //alert(" Valid State Abbreviations");
     } else {
         errorFoundState = true;
@@ -109,6 +154,8 @@ function validateZip() {
     var zipCodePattern9 = /^\d{5}$|^\d{5}-\d{4}$/
     if (zipCodePattern9.test(a)) {
         errorFoundZip = false;
+        console.log(" Zip Code field is good");
+
         //alert("Good Zip code entered. ");
     } else {
         errorFoundZip = true;
@@ -124,6 +171,8 @@ function validatePhoneNumber() {
     var phoneNum10 = /^\d{3}-\d{3}-\d{4}$/
     if (phoneNum10.test(a)) {
         errorFoundPhone = false;
+        console.log(" Phone Number field is good");
+
         //alert("Good Zip code entered. ");
     } else {
         errorFoundPhone = true;
@@ -147,19 +196,19 @@ function validateArivalDate() {
         if(regs[1] < 1 || regs[1] > 12) {
           alert("Invalid value for month: " + regs[2]);
           document.orderForm.arrival_Date.focus();
-          errorFoundArrrivalDate = true;
+          errorFoundArrivalDate = true;
         }
          // day value between 1 and 31
         if(regs[2] < 1 || regs[2] > 31) {
           alert("Invalid value for day: " + regs[1]);
           document.orderForm.arrival_Date.focus();
-          errorFoundArrrivalDate = true;
+          errorFoundArrivalDate = true;
         }
         // year value between future year
         if( regs[3] > (new Date()).getFullYear()) {
           alert("Invalid value for year: " + regs[3] + " - must be in the Future " + (new Date()).getFullYear());
           document.orderForm.arrival_Date.focus();
-          errorFoundArrrivalDate = true;}
+          errorFoundArrivalDate = true;}
 
 console.log("match arrival date format");}
 console.log(" arrival date is not blank ");}
@@ -222,8 +271,13 @@ function validateContactMe()
 if (chosen ==""){
     alert("Please select a way to contact you.")
     errorFoundContactMe = true;
+} else {
+    console.log(" Contact Me field is good");}
+
+
+
 }
-}
+
 
 function validateAmenityNum()
 {
@@ -233,6 +287,6 @@ function validateAmenityNum()
         alert("Amenity number cannot not be blank or 0 or greater than 10.")
         errorFoundAmenityNum = true;
     }
-console.log("amenity number is good.")
+console.log(" Amenity Number field is good.")
 
 }
