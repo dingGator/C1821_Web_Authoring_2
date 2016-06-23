@@ -32,7 +32,7 @@ body { background-color: #fafae6;
 *  tag: header, h1,#wrapper
 *   use googlefonts in header h1 and wrapper
 *****************************************/
-header, h1,#wrapper { margin-top: 0;
+header, h1, #wrapper { margin-top: 0;
   font-family: 'Libre Baskerville';
 }
 
@@ -51,7 +51,7 @@ border-radius: 2%;
 * tag: floatright
 for the image in the main next to the table
 it floats right
-*****************************************/
+****************************************
 
 #floatright {
   margin: 10%;
@@ -61,7 +61,7 @@ it floats right
 * tag: floatImg
 for the image in the Favorite Song part
 it floats right
-*****************************************/
+*****************************************
 
 #floatImg {
   margin: 10%;
@@ -100,7 +100,7 @@ h2 {
 /********************************************
 * tag:h3
 * the title of the paragraphs
-*****************************************/
+****************************************/
 
 h3{ text-align: center;
   font-size: 1.15em;
@@ -192,7 +192,7 @@ main { padding:0 0; }
     text shadow: pure yellow
     word color: very dark gray
 ****************************************/
-p {color: #333333;
+.introParagraph p {color: #333333;
   text-align: center;
   text-indent: 3em;
   }
@@ -201,8 +201,12 @@ p {color: #333333;
   color:#333333;
 }
 
-ul {list-style-type: none;
+.introParagraph li {
+  text-align: center;
+  list-style-type: none;
+
 }
+
 
 /********************************************
 * use the webkit & flexbox to configure website
@@ -229,8 +233,8 @@ flex:3;
 * tag: .favorites
 *  the list of favorite songs
 *
-****************************************/
-.favorites {
+***************************************/
+.favorites { padding-left: 300px;
       width: 70%;
       font-size: 1em;
 }
@@ -238,10 +242,10 @@ flex:3;
 * tag: .favoritePoints img
 *  the images of George Strait
 *
-****************************************/
+**************************************
 
 .favorites img {width: 30%;}
-
+*/
 .fade {
   opacity:0.4;
 }
@@ -267,15 +271,59 @@ main a{color:#006600;
 * tag: img
 *  The images of the page
   box-shadow: pure yellow ;
-****************************************/
+**************************************/
 
-img { width: 80%;
+#flexbox_use img { width: 80%;
  box-shadow: 2px 1px 7px 5px #ffd700;
  border-radius: 20%;
 
 }
+#floatright {
 
+  float: right;
+}
 
+#floatleft {
+  float: left;
+}
+#quote1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+
+}
+@keyframes slidein{
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%
+    width: 100%;
+  }
+}
+
+#quote3 img, #quote2 img, #quote1 img {
+       width: 20%;
+       margin-left: 40px;
+       margin-right: 40px;
+ box-shadow: 2px 1px 7px 5px #ffd700;
+ border-radius: 20%;
+}
+ #quote2 {
+  transition-delay: 2s;
+  animation-duration: 5s;
+  animation-name: slidein;
+ }
+
+ #quote3 {
+  transition-delay: 8s;
+  animation-duration: 5s;
+  animation-name: slidein;
+ }
+
+ #quote1 p, #quote2 p, #quote3 p {
+  padding-left: 300px;
+ }
 /********************************************
 * tag: footer
 *  The footer color is very dark gray
