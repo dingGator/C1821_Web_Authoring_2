@@ -1,22 +1,40 @@
 
-var errorFoundState = false;
-var errorFoundZip = false;
-var errorFoundFname = false;
-var errorFoundLname = false;
-
-var errorFoundEmail = false;
-var errorFoundAddress = false;
-var errorFoundCity = false;
-var errorFoundArrivalDate = false;
-var errorFoundDepartDate = false;
 var errorFoundSelectAmenity = false;
-var errorFoundAmenityNum = false;
-var errorFoundContactMe = false;
-var errorFoundComments = false;
+var errorFoundArrivalDate =false;
+
+var errorFoundDepartDate =false;
+    var errorFoundAmenityNum =false;
+    var errorFoundFname =false;
+    var  errorFoundLname =false;
+    var errorFoundEmail =false;
+    var errorFoundAddress =false;
+    var  errorFoundCity =false;
+    var errorFoundState =false;
+    var errorFoundZip =false;
+
+    var errorFoundContactMe = false;
+
+    var errorFoundComments = false;
 
 
-function check_validations() {
+function check_validations()
+{
+    console.log(" check validations ");
+validateFname();
 
+validateLname();
+validateEmail();
+validateAddress();
+validateCity();
+validateState();
+validateZip();
+validatePhoneNumber();
+validateArivalDate();
+validateDepartDate();
+validateSelectAmenity();
+validateAmenityNum();
+validateContactMe();
+validateComments();
     if ( errorFoundSelectAmenity){
         alert("Please check the Select Amenity field for errors.");
         return false;}
@@ -67,7 +85,8 @@ function check_validations() {
 
 function validateFname() {
     var a = document.orderForm.Fname.value.trim();
-    if (a == null || a == "") {
+    errorFoundFname = false;
+    if (a === null || a === "") {
         errorFoundFname = true;
         alert("The First Name field cannot be empty.");
     } else {
@@ -79,7 +98,9 @@ function validateFname() {
 
 function validateLname() {
     var a = document.orderForm.Lname.value.trim();
-    if (a == null || a == "") {
+    errorFoundLname = false;
+
+    if (a === null || a === "") {
         errorFoundLname = true;
         alert("The Last Name field cannot be empty.");
     } else {
@@ -89,8 +110,11 @@ function validateLname() {
 
 function validateEmail() {
     var c = document.orderForm.emailAddie.value.trim();
-    var emailAddieMatch = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
+    var emailAddieMatch = /^[a-zA-Z0-9.!#$%&â€™*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+   ///^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+   //\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b
+   // /^[a-zA-Z0-9.!#$%&â€™*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+     errorFoundEmail = false;
     if (emailAddieMatch.test(c)) {
         errorFoundEmail = false;
         console.log(" Email field is good");
@@ -103,7 +127,8 @@ function validateEmail() {
 
 function validateAddress() {
     var a = document.orderForm.mailAddie.value.trim();
-    if (a == null || a == "") {
+     errorFoundAddress = false;
+    if (a === null || a === "") {
         errorFoundAddress = true;
         alert("The Address field cannot be empty.");
     } else {
@@ -114,7 +139,9 @@ function validateAddress() {
 
 function validateCity() {
     var a = document.orderForm.City.value.trim();
-    if (a == null || a == "") {
+     errorFoundCity = false;
+
+    if (a === null || a === "") {
         errorFoundCity = true;
         alert("The City field cannot be empty.");
     } else {
@@ -124,6 +151,7 @@ function validateCity() {
 }
 function validateState() {
     var e = document.orderForm.State.value.trim();
+     errorFoundState = false;
     stateMatch = "wa|or|ca|ak|nv|id|ut|az|hi|mt|wy|" +
 
         "co|nm|nd|sd|ne|ks|ok|tx|mn|ia|mo|" +
@@ -134,7 +162,7 @@ function validateState() {
 
         "ma|ri|ct|nj|de|md|dc";
 
-    if (e == null || e == "") {
+    if (e === null || e === "") {
         errorFoundState = true;
         alert(" Invalid State abbreviations: cannot be empty");
     }
@@ -151,8 +179,9 @@ function validateState() {
 
 function validateZip() {
     var a = document.orderForm.Zip.value.trim();
+     errorFoundZip = false;
   //  var zipCodePattern5 = /^\d{5}$/;
-    var zipCodePattern9 = /^\d{5}$|^\d{5}-\d{4}$/
+    var zipCodePattern9 = /^\d{5}$|^\d{5}-\d{4}$/;
     if (zipCodePattern9.test(a)) {
         errorFoundZip = false;
         console.log(" Zip Code field is good");
@@ -168,8 +197,8 @@ function validateZip() {
 // validate Telephone number
 function validatePhoneNumber() {
     var a = document.orderForm.phoneNum.value.trim();
-
-    var phoneNum10 = /^\d{3}-\d{3}-\d{4}$/
+     errorFoundPhone = false;
+    var phoneNum10 = /^\d{3}-\d{3}-\d{4}$/;
     if (phoneNum10.test(a)) {
         errorFoundPhone = false;
         console.log(" Phone Number field is good");
@@ -184,24 +213,27 @@ function validatePhoneNumber() {
 //validate Dates
 function validateArivalDate() {
     var a = document.orderForm.arrival_Date.value.trim();
-
+ errorFoundArrivalDate = false;
 // regular expression to match required date format
     re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
-    if(a != '') {
+    if (a === null || a === "") {
+        errorFoundArrivalDate = true;
+        alert(" Invalid Arrival Date: cannot be empty");
+    }else  {
 
-      if(regs = document.orderForm.arrival_Date.value.match(re)) {
+      if(a.match(re)) {
 
-
+regs=document.orderForm.arrival_Date.value.match(re);
         // month value between 1 and 12
         if(regs[1] < 1 || regs[1] > 12) {
-          alert("Invalid value for month: " + regs[2]);
+          alert("Invalid value for month: " + regs[1]);
           document.orderForm.arrival_Date.focus();
           errorFoundArrivalDate = true;
         }
          // day value between 1 and 31
         if(regs[2] < 1 || regs[2] > 31) {
-          alert("Invalid value for day: " + regs[1]);
+          alert("Invalid value for day: " + regs[2]);
           document.orderForm.arrival_Date.focus();
           errorFoundArrivalDate = true;
         }
@@ -218,22 +250,27 @@ console.log(" Arrival Date is not blank ");}
 function validateDepartDate()
 {
     var a = document.orderForm.depart_Date.value.trim();
-
+ errorFoundDepartDate = false;
 // regular expression to match required date format
+
     re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
-    if(a != '') {
-      if(regs = document.orderForm.depart_Date.value.match(re)) {
+     if (a === null || a === "") {
+        errorFoundDepartDate = true;
+        alert(" Invalid Arrival Date: cannot be empty");
+    }else  {
 
-        // month value between 1 and 12
+      if(document.orderForm.depart_Date.value.match(re)) {
+
+regs=document.orderForm.depart_Date.value.match(re);        // month value between 1 and 12
         if(regs[1] < 1 || regs[1] > 12) {
-          alert("Invalid value for month: " + regs[2]);
+          alert("Invalid value for month: " + regs[1]);
           document.orderForm.depart_Date.focus();
           errorFoundDepartDate = true;
         }
                 // day value between 1 and 31
         if(regs[2] < 1 || regs[2] > 31) {
-          alert("Invalid value for day: " + regs[1]);
+          alert("Invalid value for day: " + regs[2]);
           document.orderForm.depart_Date.focus();
           errorFoundDepartDate = true;
         }
@@ -248,6 +285,7 @@ console.log(" Depart Date is not blank ");}}
 function validateSelectAmenity()
 {
      var a = document.orderForm.select_Amenity.value.trim();
+errorFoundSelectAmenity = false;
 
  if(a == 'blank')
 {
@@ -258,33 +296,39 @@ errorFoundSelectAmenity = true;
 }
 
 }
-// validate contactMe
-function validateContactMe()
-{   len = document.orderForm.contactMe.length;
-
-if (len ==0){
-    alert("Please select a way to contact you.")
-    errorFoundContactMe = true;
-} else {
-    console.log(" Contact Me field is good");
-}
-
-}
 function validateAmenityNum()
 {
     var num = document.orderForm.amenity_Num.value.trim();
-    if (num == 0||num==null||num>10)
+     errorFoundAmenityNum = false;
+
+    if (num === 0||num===null||num>10)
     {
-        alert("Amenity number cannot not be blank or 0 or greater than 10.")
+        alert("Amenity number cannot not be blank or 0 or greater than 10.");
         errorFoundAmenityNum = true;
     }else {
 console.log(" Amenity Number field is good.");}
 
 }
 
+// validate contactMe
+function validateContactMe()
+{   len = document.orderForm.contactMe.length;
+    errorFoundContactMe = false;
+
+if (len ===0){
+    alert("Please select a way to contact you.");
+    errorFoundContactMe = true;
+} else {
+    console.log(" Contact Me field is good");
+}
+
+}
+
 function validateComments() {
     var a = document.orderForm.comments.value.trim();
-    if (a == null || a == "") {
+     errorFoundComments = false;
+
+    if (a === null || a === "") {
         errorFoundComments = true;
         alert("The Comments field cannot be empty.");
     } else {
