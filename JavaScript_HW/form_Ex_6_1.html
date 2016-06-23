@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
+
+  Name: KT Chu
+  Current Date: 6/8/2016
+  Class/assigment:
+  CGS1821 / Excercise 6
+
+  File name: form_Ex_6_1.html
+  Language: HTML5
+
+  Includes:   formValid.css
+              to add color and font style
+********************************
+  Purpose:
+  To add table to web site
+*******************************
+The website has:
+
+
+-->
+
+<title>Form_Ex_6_1</title> <!-- * A page title -->
+<meta charset="utf-8">   <!-- * The <meta> tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="formValid_1.css" >
+<script src="myScript_3.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<form  name = orderForm method= "post" action ="sub_form.php" novalidate>
+<fieldset id = "customer_Information">
+<legend>Customer Information</legend>
+
+
+<label for ="Fname">First Name: </label>
+<br><input type="text" name="Fname" id="Fname" required><br><br>
+<span class="error" aria-live="polite"></span>
+
+<label for ="Lname">Last Name: </label>
+<br><input type="text" name="Lname" id="Lname" required><br><br>
+
+<label for ="emailAddie">Email: </label>
+<br><input type="email" name="emailAddie" id="emailAddie" onchange="validateEmail()" required><br><br>
+<label for ="mailAddie">Address:  </label>
+<br><input type="text" name="mailAddie" id="mailAddie" required><br><br>
+<label for ="City">City:  </label>
+<br><input type="text" name="City" id="City" required><br><br>
+
+<label for ="State">State:  </label>
+<br><input type="text" name="State" id="State" onchange = "validateState()" required><br><br>
+
+<label for ="Zip">Zip:  </label>
+<br><input type="number" name="Zip" id="Zip" onchange = "validateZip()" required><br><br>
+<label for ="phoneNum">Telephone Number: </label><br>
+<br><input type="tel" name="phoneNum" id="phoneNum" required><br><br>
+
+<label for ="urlAddie">URL: </label>
+<br><input type="url" name="urlAddie" id="urlAddie" onchange="validateURL()" required>
+
+
+
+</fieldset>
+
+<fieldset id= "order_Samoflanges">
+<legend>Order of Samoflanges</legend>
+<label for ="numSamoflanges">Number of Samoflanges between 1 and 100:</label><br><br><br>
+<br><input type="number" name="numSamoflanges" id="numSamoflanges"  onchange = "validateNumSamoflanges()" required><br><br>
+<label>Contact Me: </label><br><br><br>
+<input type="radio" name="contactMe"  value="by Email" >Yes by Email<br>
+
+<input type="radio" name="contactMe"  value="by Phone" >Yes by Phone<br>
+
+<input type="radio" name="contactMe"  value="by Email or Phone">Yes by Email or Phone<br>
+
+<input type="radio" name="contactMe"  value="no">No, Do Not Contact Me<br>
+
+</fieldset>
+
+<button type= "submit">Submit</button>
+<button type= "reset">Reset</button>
+
+</form>
+</div>
+
+</body>
+</html>
