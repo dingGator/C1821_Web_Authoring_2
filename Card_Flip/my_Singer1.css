@@ -275,12 +275,12 @@ main a{color:#006600;
  border-radius: 20%;
 
 }
-#floatright {
+.floatright {
 
   float: right;
 }
 
-#floatleft {
+.floatleft {
   float: left;
 }
 #quote1 {
@@ -294,7 +294,7 @@ main a{color:#006600;
     width: 300%;
   }
   to {
-    margin-left: 0%
+    margin-left: 0%;
     width: 100%;
   }
 }
@@ -320,6 +320,44 @@ main a{color:#006600;
 
  #quote1 p, #quote2 p, #quote3 p {
   padding-left: 300px;
+ }
+
+ .card-container{
+  height: 450px;
+  perspective: 500px;
+  position: relative;
+  width:520px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ .card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+ }
+ .card:hover {
+  transform: rotateY(180deg);
+ }
+ .card.sideA {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+ }
+ .card.sideB {
+  text-align: center;
+  width: 80%;
+  transform: rotateY(180deg);
+ }
+
+ .card img{
+   box-shadow: 2px 1px 7px 5px #ffd700;
+ border-radius: 20%;
+
+   height: 80%;
+   width: 80%;
  }
 /********************************************
 * tag: footer
