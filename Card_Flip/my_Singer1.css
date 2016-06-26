@@ -275,12 +275,12 @@ main a{color:#006600;
  border-radius: 20%;
 
 }
-.floatright {
+#floatright {
 
   float: right;
 }
 
-.floatleft {
+#floatleft {
   float: left;
 }
 #quote1 {
@@ -294,7 +294,7 @@ main a{color:#006600;
     width: 300%;
   }
   to {
-    margin-left: 0%;
+    margin-left: 0%
     width: 100%;
   }
 }
@@ -324,7 +324,7 @@ main a{color:#006600;
 
  .card-container{
   height: 450px;
-  perspective: 500px;
+  perspective: 500;
   position: relative;
   width:520px;
   margin-left: auto;

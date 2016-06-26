@@ -280,7 +280,7 @@ main a{color:#006600;
   float: right;
 }
 
-.floatleft {
+#floatleft {
   float: left;
 }
 #quote1 {
@@ -294,7 +294,7 @@ main a{color:#006600;
     width: 300%;
   }
   to {
-    margin-left: 0%;
+    margin-left: 0%
     width: 100%;
   }
 }
