@@ -1,0 +1,159 @@
+/*******************************
+
+   CGS1821
+   Class Excercise 6
+
+   Author: KT Chu
+   Date: 6/9/2016
+
+   File name: formValid.css
+   Supporting files:	form_Ex_6.html
+   Purpose:
+   To use CSS style sheet to add
+   colors and styles to HTML
+**************************************
+*/
+/********************************************
+*tag:header, main, nav, footer, figure, figcaption:
+* use display: block for all elements
+*****************************************/
+header, main, footer { display: block; }
+/****************************
+tag: body
+background-color:#c3d8f2  light grayish blue
+
+*****************/
+body{
+	background-color:#c3d8f2;
+
+}
+/****************************
+tag: wrapper
+background-color:#FFFFFF   white
+
+*****************/
+.wrapper{
+	margin-top:5%;
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	background-color:#FFFFFF;
+	border-radius: 25px;
+	padding:15px;
+}
+.centerMe{
+	text-align:center;
+
+}
+/****************************
+tag: form
+background-color:#eaeaea   very light gray
+*****************/
+
+form { background-color:#eaeaea;
+	font-family: Arial, sans-serif;
+    padding: 10px;
+	border-radius: 20px;}
+label {
+
+	float: left;
+	width: 100px;
+    clear: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px; }
+
+input {
+				width:180px;
+				margin: 0;
+				-webkit-box-sizing: 	border-box;
+                	-moz-box-sizing:	border-box;
+                		box-sizing:		border-box;
+                 }
+
+input.invalid {
+	border: 1px solid red;
+}
+
+input.valid {
+	border: 1px solid green;
+}
+
+/****************************
+tag: #customer_Information
+   background-color: #edfafb   Light grayish cyan.
+*****************/
+
+#customer_Information  {
+	border-radius: 20px;
+    background-color: #edfafb;
+}
+/****************************
+tag: #customer_Information input
+	background-color: #f2dee3   Light grayish red.
+*****************/
+#customer_Information input{
+	border-radius: 20px;
+	background-color: #f2dee3;
+}
+/****************************
+tag:#order_Samoflanges
+				background-color: #fafbed  Light grayish yellow.
+*****************/
+#order_Samoflanges {
+				font-size: 17px;
+				font-family: "Times New Roman",Times;
+				border-radius: 20px;
+				background-color: #fafbed;
+
+
+}
+
+/****************************
+tag:#numSamoflanges
+	background-color: #f2c3f0    Light grayish magenta.
+
+*****************/
+
+#numSamoflanges {
+	font-size: 17px;
+	font-family:  'Libre Baskerville';
+	height: 100px;
+	text-align: center;
+	border-radius: 50px;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	background-color: #f2c3f0;
+
+}
+/****************************
+tag:#contactMe
+	background-color: #f2c3f0    Light grayish magenta.
+
+*****************/
+
+#contactMe {
+border-radius: 50px;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	background-color: #f2c3f0;
+
+}
+
+#mySubmit { margin-left: 110px; }
+
+/****************************
+tag:  button
+	background-color: #2ab5be Strong cyan.
+	 font color: #FFFFFF white
+*****************/
+
+button {
+	background-color: #2ab5be;
+	color: #FFFFFF;
+	padding: 10px 22px;
+	text-align:center;
+	display: inline-block;
+	border-radius: 12px;
+
+}
