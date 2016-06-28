@@ -192,19 +192,35 @@ main { padding:0 0; }
     text shadow: pure yellow
     word color: very dark gray
 ****************************************/
-.introParagraph p {color: #333333;
+#accordion {color: #333333;
   text-align: center;
   text-indent: 3em;
+
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  overflow:hidden;
+  box-shadow:0px 1px 3px #ffd700;
+  border-radius:10px;
   }
 
-.goldWord {text-shadow: 3px 3px 5px #ffd700;
+.accordion_Title h3 {text-shadow: 3px 3px 5px #ffd700;
   color:#333333;
 }
 
-.introParagraph li {
-  text-align: center;
-  list-style-type: none;
+.accordion_Title.active, .accordion_Title:hover {
+  background: #4c4c4c;
+     background-color: #afafff;
+      }
 
+.accordion_Content {
+  background: #4c4c4c;
+     background:#f1ffe2;      }
+
+
+.goldWord {
+ text-shadow: 3px 3px 5px #ffd700;
+  color:#333333;
 }
 
 
@@ -330,6 +346,7 @@ main a{color:#006600;
   margin-left: auto;
   margin-right: auto;
  }
+
  .card {
   height: 100%;
   position: absolute;
@@ -358,6 +375,26 @@ main a{color:#006600;
 
    height: 80%;
    width: 80%;
+ }
+
+#vidWrapper{
+
+
+ padding-left: 30%;
+padding-right: 30%;
+height:315px;
+width: 420px;
+
+ }
+
+#vidWrapper iframe{
+  border-radius: 20%;
+box-shadow: 2px 1px 7px 5px #ffd700;
+  position: relative;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
  }
 /********************************************
 * tag: footer
