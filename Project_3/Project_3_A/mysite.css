@@ -446,7 +446,9 @@ tbody td:nth-child(odd){
 }
 .When { font-size: 50%; }
 
-
+/****************************
+video
+***************************/
 
 #vidWrapper{
 
@@ -466,6 +468,7 @@ box-shadow: 2px 1px 7px 5px #191970;
   height: 100%;
  }
 /**************************
+text animation
 **********************/
 #story1 {
   animation-duration: 3s;
@@ -622,6 +625,51 @@ tag: #customer_Information input
    font-size: 18px;
 }
 
+/***********************
+slider
+anemity ordering
+************************/
+#amenity_Num {
+  border:0;
+color:#1a1de3;
+font-weight: bold;}
+
+#sliderVisual {
+  width: 35%;
+margin-left: 200px;
+ }
+#helloWorld {
+  height: 50px;
+}
+
+/****************************
+carousel
+*****************************/
+.carousel{
+        padding-top: 20px;
+        width: 357px;
+        overflow: hidden;
+        height: 500px;
+        position: relative;
+    }
+.carousel ul{
+        position: relative;
+        list-style: none;
+        list-style-type: none;
+        margin: 0;
+        height: 50px;
+        padding: 0;
+    }
+  .carousel ul li{
+        position: absolute;
+        height: 25px;
+        width: 50px;
+        float: left;
+        margin-right: 1px;
+        background: #f2f2f2;
+        text-align: center;
+        padding-top: 25px;
+    }
 /****************************
 tag:#contactMe
   background-color: #f2c3f0    Light grayish magenta.

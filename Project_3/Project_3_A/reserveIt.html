@@ -24,7 +24,15 @@ To work with various ids, styles and descendant styles
   <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="mysite.css" >
 
-<script src="myScript_Proj_2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+
+
+
+<script src="myScript_Proj_3.js"></script>
   <!--[if lt IE 9]>
    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
 <![endif]-->
@@ -93,14 +101,19 @@ To work with various ids, styles and descendant styles
     <option  value = "tour">Tours</option>
 
   </select>
-  <br><br><label for = "arrival_Date">Activity Dates:<br> Arrival Date:</label>
+
+  <br><br><label for = "amenity_Num">Number To Reserve<br>  Choose a number between 1 and 10:</label>
+  <br><br><br><input type="text" name="amenity_Num" id ="amenity_Num"  onchange = "validateAmenityNum()" ><br><br>
+
+
+<div id="sliderVisual"></div>
+
+  <br><label for = "arrival_Date">Activity Dates<br> Arrival Date:</label>
   <br><input type="text" name= "arrival_Date" id="arrival_Date" placeholder="mm/dd/yyyy"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateArivalDate()"  >
 
   <br><label for ="depart_Date">Departure Date:</label>
   <input type="text" name="depart_Date" id ="depart_Date" placeholder="mm/dd/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateDepartDate()" >
 
-  <br><br><label for = "amenity_Num">Number of Amenity To Reserve<br>  Choose a number between 1 and 10:</label>
-  <br><br><br><input type="number" name="amenity_Num" id ="amenity_Num" min ="1" max="10" onchange = "validateAmenityNum()" >
 
 
 </fieldset>
