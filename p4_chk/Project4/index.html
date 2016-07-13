@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--      Required documentation
+
+      Name: KT Chu
+      Current Date: 6/15/2016
+      Class/assigment:
+      CGS1821 / Project 3
+
+      File name: index.html
+      Language: HTML5
+
+      Includes:   mysite.css
+                  to add color and font style
+    ********************************
+      Purpose:
+    To work with various ids, styles and descendant styles
+    *******************************
+    -->
+    <title>Devils Millhopper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet'
+          type='text/css'>
+
+
+
+    <!-- the three things that jQuery Mobile needs to work -->
+    <!-- <link rel="stylesheet" href="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />  -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- <script src="../jquery-1.11.0.js" type="text/javascript"></script>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- <script src="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>  -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="mysite_3.css">
+
+
+
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+<div id="wrapper" class="index_Page">
+    <header >
+        <span><a href="#content">Skip to Content</a></span>
+        <h1 >Devils Millhopper Geological State Park</h1>
+        <h2>Home</h2>
+        <h2 class="place"><br> 4732 Millhopper Rd, Gainesville, FL 32653</h2>
+        <div id="parkInfo">
+            <dl class="parkhours">
+                <dt><br> Hours:<br></dt>
+                <dd> Open 9:00 am to 5:00 pm</dd>
+                <dd>Wednesday through Sunday<br></dd>
+                <dd>The park is closed:<br>Monday and Tuesday<br></dd>
+            </dl>
+
+
+            <dl class="parkfees">
+                <dt><br> Fees: <br></dt>
+                <dd>Admission to the park is $4.00 per vehicle<br></dd>
+                <dd>Up to 8 visitors per vehicle<br></dd>
+                <dd>Pedestrians and bikes are $2.00<br><br></dd>
+            </dl>
+        </div>
+    </header>
+    <div id="flexbox_use">
+        <nav>
+            <ul>
+                <li><a href="index.html" rel="external"> Home&nbsp;&nbsp;  </a></li>
+                <li><a href="history.html" rel="external"> History&nbsp;&nbsp;  </a></li>
+                <li><a href="expIt.html" rel="external"> Experience It&nbsp;&nbsp;  </a></li>
+                <li><a href="favorites.html" rel="external"> Favorites&nbsp;&nbsp;  </a></li>
+                <li><a href="reserveIt.html" rel="external"> Reserve It&nbsp;&nbsp;<br></a></li>
+
+
+            </ul>
+            <img class="fade" id="floatright" src="images/IMG_20160227_143017.jpg" alt="Forest Scenery">
+
+        </nav>
+        <main id="content">
+
+            <h3> National Natural Landmark<br></h3>
+            <h4>The State Park System's Only Geological Site</h4>
+            <p class="park_intro">
+
+                A sink hole that is 120 feet deep and 500 feet wide. The sink hole has a miniature rain forest. Small
+                streams and fountains are just two of many features of the sink hole. Natural vegetation, shells, shark
+                teeth and fossils remains line the walls of sinkhole for the casual naturalist in all of us.<br><br>
+            </p>
+
+            <h3>This website will help you enjoy your visit to<br> Devils Millhopper<br></h3>
+            <p class="site_intro">
+                It will highlight the history, tours, and activities of the Devils Millhopper Park. It will map out many
+                must-see and not-to-be-missed parts of Devils Millhopper.<br>
+                Living about a mile from Devils Millhopper, I would like to welcome you to my "backyard" Devils
+                Millhopper.<br>
+            </p>
+            <a href="https://www.floridastateparks.org/park/Devils-Millhopper">Learn Florida Parks:
+                www.floridastateparks.org </a>
+
+        </main>
+        <aside class="challenge">
+
+            <h3> Find The Treasures of<br>Devils Millhopper Park?<br></h3>
+
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/IMG_20160227_142923.jpg" alt="Forest Scenery">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/IMG_20160227_143017.jpg" alt="Trees">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/IMG_20160227_142759.jpg" alt="Trees">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/IMG_20160227_142724.jpg" alt="Trees">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </aside>
+
+    </div>
+
+
+    <footer>
+        Copyright &copy; 2016 Kim Chu <br><a href="mailto:kim@chucrew.net">kim@chucrew.net</a>
+    </footer>
+
+
+</div>
+</body>
+</html>
+

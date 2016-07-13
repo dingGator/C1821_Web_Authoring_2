@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
+
+  Name: KT Chu
+  Current Date: 6/15/2016
+  Class/assigment:
+  CGS1821 / Project 2
+
+  File name: expIt.html
+  Language: HTML5
+
+  Includes:   mysite.css
+              to add color and font style
+********************************
+  Purpose:
+To work with various ids, styles and descendant styles
+*******************************
+-->
+<title>Devils Millhopper Reserve It</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<!-- the three things that jQuery Mobile needs to work -->
+    <!-- <link rel="stylesheet" href="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />  -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- <script src="../jquery-1.11.0.js" type="text/javascript"></script>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- <script src="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>  -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<script src="myScript_Proj_3.js"></script>
+  <!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+<![endif]-->
+<link rel="stylesheet" href="mysite_3.css" >
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+    <span><a href="#content">Skip to Content</a></span>
+      <h1>Devils Millhopper Geological State Park</h1>
+      <h2>Reserve It</h2>
+      <h2 class="place"><br> 4732 Millhopper Rd, Gainesville, FL 32653</h2>
+  <div id="parkInfo">
+        <dl class="parkhours">
+          <dt><br> Hours:<br></dt>
+          <dd> Open 9:00 am to 5:00 pm</dd>
+          <dd>Wednesday through Sunday<br></dd>
+          <dd>The park is closed:<br>Monday and Tuesday<br></dd>
+        </dl>
+
+
+        <dl class="parkfees">
+          <dt><br> Fees: <br></dt>
+          <dd>Admission to the park is $4.00 per vehicle<br></dd>
+          <dd>Up to 8 visitors per vehicle<br></dd>
+          <dd>Pedestrians and bikes are $2.00<br><br></dd>
+        </dl>
+  </div>
+    </header>
+
+
+    <div id="flexbox_use">
+
+   <nav>
+   <ul>
+      <li><a href="index.html" rel="external">  Home&nbsp;&nbsp;  </a></li>
+      <li><a href="history.html" rel="external">  History&nbsp;&nbsp;  </a></li>
+      <li><a href="expIt.html" rel="external">  Experience It&nbsp;&nbsp;  </a></li>
+      <li><a href="favorites.html" rel="external">  Favorites&nbsp;&nbsp;  </a></li>
+      <li><a href="reserveIt.html" rel="external">  Reserve It&nbsp;&nbsp;<br></a></li>
+    </ul>
+<img   class="fade"    id="floatright" src="images/IMG_20160227_143017.jpg" alt="Forest Scenery">
+    </nav>
+    <main>
+
+
+<form  id="form_reservation" name= "orderForm" rel="external" data-ajax="false" method="post" action="sub_form.php" onsubmit="return check_validations();">
+<h2><br>Reserve Devils Millhopper Park<br></h2>
+<fieldset id="reservation_Information" class="ui-field-contain">
+<legend><br>Devils Millhopper Park Reservations</legend>
+<label><br> Privacy Policy of floridastateparks.org:</label>
+<p>
+  <br><a href="http://floridastateparks.reserveamerica.com/marketing.do?goto=/marketingHTML/privacy.html">The Information We Collect...( Please Read)</a>
+</p>
+  <label >Amenities</label>
+<div data-role="controlgroup"  data-type="vertical" class="ui-field-contain">
+  <select data-native-menu= "false" id="select_Amenity" name = "select_Amenity" onchange ="validateSelectAmenity()">
+    <option  value = "blank">Select One Amenity</option>
+    <option  value = "horses">Horses</option>
+    <option  value = "canoes">Canoes</option>
+    <option  value = "picnic tables">Picnic Tables</option>
+    <option  value = "camp sites">Camp Sites</option>
+    <option  value = "tours">Tours</option>
+
+  </select>
+</div>
+  <br><label for = "amenity_Num">Number To Reserve<br>  Choose a number between 1 and 10:</label>
+  <br><input type="range" name="amenity_Num" id ="amenity_Num" min="0" max="10" step="1" onchange = "validateAmenityNum()" />
+
+
+
+
+  <br><label for = "arrival_Date">Activity Dates<br> Arrival Date:</label>
+  <input type="text" name= "arrival_Date" id="arrival_Date" placeholder="mm/dd/yyyy"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateArivalDate()"  />
+
+  <br><label for ="depart_Date">Departure Date:</label>
+  <input type="text" name="depart_Date" id ="depart_Date" placeholder="mm/dd/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateDepartDate()" />
+
+
+
+</fieldset>
+<fieldset id="camper_Information2" class="ui-field-contain">
+<legend>Camper Information</legend>
+
+<label><br> Privacy Policy of floridastateparks.org:</label>
+<p>
+  <br><a href="http://floridastateparks.reserveamerica.com/marketing.do?goto=/marketingHTML/privacy.html">The Information We Collect...( Please Read)</a>
+</p>
+<div >
+            <br><label for="Fname">First Name: </label>
+            <input type="text" name="Fname" id="Fname" onchange="validateFname()" />
+
+
+            <br><label for="Lname">Last Name: </label>
+            <input type="text" name="Lname" id="Lname" onchange="validateLname()" />
+
+            <br><label for="emailAddie">Email:</label>
+            <input type="email" name="emailAddie" id="emailAddie" onchange="validateEmail()" placeholder="your@email.com" />
+
+            <br><label for="mailAddie">Address: </label>
+            <input type="text" name="mailAddie" id="mailAddie" onchange="validateAddress()"/>
+
+
+            <br><label for="City">City: </label>
+            <input type="text" name="City" id="City" onchange="validateCity()" />
+
+            <br><label for="State">State: </label>
+            <input type="text" name="State" id="State" onchange="validateState()" minlength="2" placeholder="aa" />
+
+            <br><label for="Zip">Zip: </label>
+            <input type="text" name="Zip" id="Zip" onchange="validateZip()"  placeholder="XXXXX-XXXX" />
+
+            <br><label for="phoneNum">Telephone Number: </label>
+            <input type="tel" name="phoneNum" id="phoneNum" onchange="validatePhoneNumber()"  placeholder="XXX-XXX-XXXX" />
+
+<br><label>Contact Me: </label><br>
+
+<div data-role="controlgroup">
+
+
+            <input class="ui-btn ui-mini" type="radio" name="contactMe"  onchange ="validateContactMe()" value="by Email"/>
+            <h5>Yes by Email</h5>
+
+
+            <input class="ui-btn ui-mini" type="radio" name="contactMe" onchange ="validateContactMe()"  value="by Phone"/>
+            <h5>Yes by Phone</h5>
+            <input class="ui-btn ui-mini" type="radio" name="contactMe" onchange ="validateContactMe()" value="by Email or Phone"/><h5>Yes by Email or Phone</h5>
+
+            <input class="ui-btn ui-mini" type="radio" name="contactMe" onchange ="validateContactMe()" value="no"/><h5>No, Do Not Contact Me</h5>
+</div>
+            <br><label for ="comments">Comments: <br> Please add any extra instruction to help us<br> make your stay with us excellent, <br>or no comments:</label><br>
+            <textarea name="comments" id="comments" rows="4" cols="40" placeholder="No Comments" onchange =" validateComments()"></textarea><br>
+</div>
+<label> Privacy Policy of floridastateparks.org:</label>
+<p>
+  <br><a href="http://floridastateparks.reserveamerica.com/marketing.do?goto=/marketingHTML/privacy.html">The Information We Collect...( Please Read)</a>
+</p>
+
+       <button type="submit" class="ui-btn ui-btn-inline">Submit</button>
+        <button type="reset" class="ui-btn ui-btn-inline">Reset</button>
+
+</fieldset>
+</form>
+</main>
+</div>
+
+
+    <footer >
+      Copyright &copy; 2016 Kim Chu <br><a href="mailto:kim@chucrew.net">kim@chucrew.net</a>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
