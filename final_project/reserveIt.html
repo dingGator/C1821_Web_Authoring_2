@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--      Required documentation
+
+  Name: KT Chu
+  Current Date: 7/10/2016
+  Class/assigment:
+  CGS1821 / Final Project
+  File name: reserveIt.html
+  Language: HTML5
+
+  Includes:   mysite.css
+              to add color and font style
+********************************
+  Purpose:
+To work with various ids, styles and descendant styles
+*******************************
+-->
+<title>Devils Millhopper Reserve It</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+
+
+<script src="JS/myScript_Proj_3.js"></script>
+<link rel="stylesheet" href="mysite.css" >
+  <!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+<![endif]-->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+    <span><a href="#content">Skip to Content</a></span>
+      <h1>Devils Millhopper Geological State Park</h1>
+      <h2>Reserve It</h2>
+      <h2 class="place"><br> 4732 Millhopper Rd, Gainesville, FL 32653</h2>
+  <div id="parkInfo">
+        <dl class="parkhours">
+          <dt><br> Hours:<br></dt>
+          <dd> Open 9:00 am to 5:00 pm</dd>
+          <dd>Wednesday through Sunday<br></dd>
+          <dd>The park is closed:<br>Monday and Tuesday<br></dd>
+        </dl>
+
+
+        <dl class="parkfees">
+          <dt><br> Fees: <br></dt>
+          <dd>Admission to the park is $4.00 per vehicle<br></dd>
+          <dd>Up to 8 visitors per vehicle<br></dd>
+          <dd>Pedestrians and bikes are $2.00<br><br></dd>
+        </dl>
+  </div>
+    </header>
+
+
+    <div id="flexbox_use">
+
+
+
+   <nav>
+   <ul>
+      <li><a href="index.html">  Home&nbsp;&nbsp;  </a></li>
+      <li><a href="history.html">  History&nbsp;&nbsp;  </a></li>
+      <li><a href="expIt.html">  Experience It&nbsp;&nbsp;  </a></li>
+      <li><a href="favorites.html">  Favorites&nbsp;&nbsp;  </a></li>
+      <li><a href="reserveIt.html">  Reserve It&nbsp;&nbsp;<br></a></li>
+      <li><a href="rules_Safety.html">Rules & Safety&nbsp;&nbsp;</a></li>
+    </ul>
+<img   class="fade" id= "img_nav" src="images/IMG_20160227_143017.jpg" alt="Forest Scenery">
+    </nav>
+    <main class="favoritePoints" id ="content">
+
+
+<form  id="form_reservation" name= orderForm method="post" action="sub_form.php" onsubmit="return check_validations();">
+<br><h2 >Reserve Devils Millhopper Park</h2><br>
+<fieldset id="reservation_Information">
+<legend>Devils Millhopper Park Reservations</legend>
+<label> Privacy Policy of floridastateparks.org:</label>
+<p>
+  <br><a href="http://floridastateparks.reserveamerica.com/marketing.do?goto=/marketingHTML/privacy.html">The Information We Collect...( Please Read)</a>
+</p>
+  <label >Amenities</label>
+
+  <select name = "select_Amenity" onchange ="validateSelectAmenity()">
+    <option  value = "blank">Select One Amenity</option>
+    <option  value = "horses">Horses</option>
+    <option  value = "canoe">Canoes</option>
+    <option  value = "picnic table">Picnic Tables</option>
+    <option  value = "camp site">Camp Sites</option>
+    <option  value = "tour">Tours</option>
+
+  </select>
+
+  <br><br><label for = "amenity_Num">Number To Reserve<br>  Choose a number between 1 and 10:</label>
+  <br><br><br><input type="text" name="amenity_Num" id ="amenity_Num"  onchange = "validateAmenityNum()" ><br><br>
+
+
+<div id="sliderVisual"></div>
+
+  <br><label for = "arrival_Date">Activity Dates<br> Arrival Date:</label>
+  <br><input type="text" name= "arrival_Date" id="arrival_Date" placeholder="mm/dd/yyyy"  pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateArivalDate()"  >
+
+  <br><label for ="depart_Date">Departure Date:</label>
+  <input type="text" name="depart_Date" id ="depart_Date" placeholder="mm/dd/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="validateDepartDate()" >
+
+
+
+</fieldset>
+<fieldset id="camper_Information2">
+<legend>Camper Information</legend>
+
+<label> Privacy Policy of floridastateparks.org:</label>
+<p>
+  <br><a href="http://floridastateparks.reserveamerica.com/marketing.do?goto=/marketingHTML/privacy.html">The Information We Collect...( Please Read)</a>
+</p>
+            <br><label for="Fname">First Name: </label>
+            <input type="text" name="Fname" id="Fname" onchange="validateFname()" >
+
+
+            <br><label for="Lname">Last Name: </label>
+            <input type="text" name="Lname" id="Lname" onchange="validateLname()" >
+
+            <br><br><label for="emailAddie">Email:</label>
+            <input type="email" name="emailAddie" id="emailAddie" onchange="validateEmail()" placeholder="your@email.com" >
+
+            <br><br><label for="mailAddie">Address: </label>
+            <input type="text" name="mailAddie" id="mailAddie" onchange="validateAddress()">
+
+
+            <br><label for="City">City: </label>
+            <input type="text" name="City" id="City" onchange="validateCity()" >
+
+            <br><label for="State">State: </label>
+            <input type="text" name="State" id="State" onchange="validateState()" minlength="2" placeholder="aa" >
+
+            <br><label for="Zip">Zip: </label>
+            <input type="text" name="Zip" id="Zip" onchange="validateZip()"  placeholder="XXXXX-XXXX" >
+
+            <br><br><label for="phoneNum">Telephone Number: </label>
+            <input type="tel" name="phoneNum" id="phoneNum" onchange="validatePhoneNumber()"  placeholder="XXX-XXX-XXXX" >
+
+            <br><br><label >Contact Me: </label><br><br>
+            <input type="radio" name="contactMe"  onchange ="validateContactMe()" value="by Email">Yes by Email<br>
+
+            <input type="radio" name="contactMe" onchange ="validateContactMe()"  value="by Phone">Yes by Phone<br>
+
+            <input type="radio" name="contactMe" onchange ="validateContactMe()" value="by Email or Phone">Yes by Email or Phone<br>
+
+            <input type="radio" name="contactMe" onchange ="validateContactMe()" value="no">No, Do Not Contact Me<br>
+
+            <br><label for ="comments">Comments: <br> Please add any extra instruction to help us<br> make your stay with us excellent, <br>or no comments:</label><br>
+            <br><br><br><textarea name="comments" id="comments" rows="4" cols="40" placeholder="No Comments" onchange ="validateContactMe()"></textarea><br>
+
+<label> Privacy Policy of floridastateparks.org:</label>
+<p>
+  <br><a href="http://floridastateparks.reserveamerica.com/marketing.do?goto=/marketingHTML/privacy.html">The Information We Collect...( Please Read)</a>
+</p>
+
+       <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+</fieldset>
+</form>
+</main>
+</div>
+
+
+    <footer >
+      Copyright &copy; 2016 Kim Chu <br><a href="mailto:kim@chucrew.net">kim@chucrew.net</a>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
